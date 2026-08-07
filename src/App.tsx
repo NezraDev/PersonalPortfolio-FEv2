@@ -45,7 +45,9 @@ function App() {
 
       <div className="mx-auto w-full max-w-5xl px-6 pt-8 md:px-10 md:pt-10">
         <div className="lg:grid lg:grid-cols-[240px_1fr] lg:gap-12 lg:items-start lg:min-h-[calc(100vh-4rem)]">
-          <Sidebar />
+          <div className={route === "home" ? undefined : "hidden lg:block"}>
+            <Sidebar />
+          </div>
 
           <main className="min-w-0 border-t border-border lg:border-t-0 lg:border-l lg:pl-12">
             <AnimatePresence mode="wait" initial={false}>

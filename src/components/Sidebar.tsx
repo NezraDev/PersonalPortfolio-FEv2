@@ -42,7 +42,7 @@ export default function Sidebar() {
         />
       </div>
 
-      <h1 className="mt-6 text-2xl font-bold tracking-tight text-ink">
+      <h1 className="mt-6 text-xl font-bold tracking-tight text-ink sm:text-2xl">
         Arwil Martin Paraiso
       </h1>
       <p className="mt-1 text-sm font-medium text-ink-secondary">
