@@ -48,7 +48,7 @@ export default function Sidebar() {
       <p className="mt-1 text-sm font-medium text-ink-secondary">
         Computer Science Student
         <br />
-        Aspiring UI/UX Developer
+        Aspiring UI/Frontend Developer
       </p>
 
       <p className="mt-5 max-w-xs text-sm leading-relaxed text-ink-muted">

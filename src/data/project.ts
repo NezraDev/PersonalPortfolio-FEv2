@@ -18,7 +18,7 @@ export const projects: Project[] = [
   {
     id: "centrisai",
     title:
-      "CentrisAI - Central Bangkok Flood Monitoring and Monitoring System (V2.0 - Ongoing)",
+      "CentrisAI - Central Bangkok Flood Monitoring and Monitoring System (V2.0 - In-Progress)",
     description:
       "A unified dashboard for forecasting flood conditions, monitoring rainfall, canal levels, and flow, and reviewing district-level risk across Central Bangkok.",
     coverImage: "assets/projects/centrisai.png",
@@ -31,13 +31,34 @@ export const projects: Project[] = [
   },
   {
     id: "rooftop",
-    title: "AI-Based Rooftop Detection and House Counting (Ongoing)",
+    title: "AI-Based Rooftop Detection and House Counting (In-Progress)",
     description:
       "An AI-powered computer vision system that automatically detects rooftops from aerial or satellite imagery to estimate the number of houses within a specified area.",
     coverImage: "assets/projects/rooftop.png",
     technologies: ["React", "TailwindCSS"],
     githubUrl: "https://github.com/NezraDev/Rooftop-House-Detection.git",
     liveUrl: "https://rooftop-detection-ph.netlify.app",
+    year: "2026",
+    category: "Frontend Development",
+    featured: true,
+  },
+  {
+    id: "intellilock",
+    title: "IntelliLock - IoT RFID Smart Door Lock System",
+    description:
+      "An IoT-based classroom access management system that uses RFID authentication to prevent unauthorized entry, record classroom access logs, and monitor room availability through a centralized Laravel dashboard.",
+    coverImage: "assets/projects/intellilock.png",
+    technologies: [
+      "Laravel",
+      "Blade",
+      "PHP",
+      "TailwindCSS",
+      "MySQL",
+      "ESP32",
+      "RFID",
+    ],
+    githubUrl: "https://github.com/NezraDev?tab=repositories",
+    liveUrl: "",
     year: "2026",
     category: "Frontend Development",
     featured: true,
@@ -57,20 +78,6 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    id: "cc",
-    title: "Digital Citizen Charter Satisfaction Survey",
-    description:
-      "A responsive frontend survey page that enables citizens to conveniently submit Citizen Charter satisfaction feedback online through an intuitive, accessible, and mobile-friendly interface.",
-    coverImage: "assets/projects/cc.png",
-    technologies: ["React", "TailwindCSS"],
-    githubUrl:
-      "https://github.com/NezraDev/LSPU-LB-Citizen-Client-Satisfaction-Survey-Frontend.git",
-    liveUrl: "https://lspu-lb-cc-survey.netlify.app",
-    year: "2025",
-    category: "Frontend Development",
-    featured: true,
-  },
-  {
     id: "suss-magazine",
     title: "SUSS: The Social Communal - Digital Magazine Management System",
     description:
@@ -83,6 +90,21 @@ export const projects: Project[] = [
     category: "Frontend Development",
     featured: true,
   },
+  {
+    id: "cc",
+    title: "Digital Citizen Charter Satisfaction Survey",
+    description:
+      "A responsive frontend survey page that enables citizens to conveniently submit Citizen Charter satisfaction feedback online through an intuitive, accessible, and mobile-friendly interface.",
+    coverImage: "assets/projects/cc.png",
+    technologies: ["React", "TailwindCSS"],
+    githubUrl:
+      "https://github.com/NezraDev/LSPU-LB-Citizen-Client-Satisfaction-Survey-Frontend.git",
+    liveUrl: "https://lspu-lb-cc-survey.netlify.app",
+    year: "2026",
+    category: "Frontend Development",
+    featured: true,
+  },
+
   {
     id: "portfolio-old",
     title: "Personal Portfolio Website V1.0",

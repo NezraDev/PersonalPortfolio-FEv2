@@ -1,4 +1,7 @@
-export type ProjectCategory = "Frontend Development" | "UI/UX Design";
+export type ProjectCategory =
+  | "Frontend Development"
+  | "UI/UX Design"
+  | "Full-Stack & IoT Development";
 
 export interface Project {
   id: string;
