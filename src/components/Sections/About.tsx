@@ -12,25 +12,26 @@ export default function About() {
         <div className="max-w-2xl space-y-4 text-sm leading-relaxed text-ink-secondary md:text-base text-justify">
           <p>
             I'm a 4th-year Computer Science student at Laguna State Polytechnic
-            University — Los Baños Campus with a strong focus on frontend
-            development, UI design, and UX. I enjoy transforming ideas into
-            responsive, intuitive, and visually polished web experiences using
-            React and modern web technologies.
+            University — Los Baños Campus, specializing in frontend development
+            and UI/UX design. I build responsive, user-centered web interfaces
+            using React and Tailwind CSS, with a strong focus on translating
+            Figma designs into polished, functional experiences.
           </p>
 
           <p>
-            I combine design thinking with practical frontend development to
-            create interfaces that are accessible, user-friendly, and
-            maintainable. Through academic, personal, and project-based work,
-            I’ve developed experience turning requirements and concepts into
-            functional digital products while continuously improving my
-            technical and design skills.
+            Through client, academic, and personal projects, I've worked on
+            digital products ranging from management systems and interactive
+            dashboards to AI-powered and monitoring interfaces. I combine design
+            thinking with practical frontend development to turn requirements
+            and visual concepts into intuitive, accessible, and maintainable
+            interfaces.
           </p>
 
           <p>
-            I’m looking to grow as a frontend developer and UI/UX practitioner
-            while contributing to products that solve real problems and provide
-            meaningful experiences for users.
+            I'm continuing to grow as a Front-End Developer, strengthening both
+            my technical implementation and design skills while creating digital
+            experiences that solve real problems and make complex systems easier
+            to use.
           </p>
         </div>
       </AnimatedSection>
