@@ -12,10 +12,10 @@ interface ExperienceProps {
 
 export default function Experience({ showDescription = true }: ExperienceProps) {
   return (
-    <div className="py-8 md:py-10">
+    <div className={showDescription ? "py-8 md:py-10" : "py-8 md:py-10 lg:py-8"}>
       <SectionTitle icon={Briefcase} title="Experience" />
 
-      <div className="space-y-8">
+      <div className={showDescription ? "space-y-8" : "space-y-8 lg:space-y-5"}>
         {experience.map((exp, index) => (
           <motion.div
             key={exp.id}
@@ -25,7 +25,9 @@ export default function Experience({ showDescription = true }: ExperienceProps) 
             transition={{ duration: 0.45, delay: Math.min(index * 0.05, 0.15), ease: [0.16, 1, 0.3, 1] }}
             className={
               index > 0
-                ? "flex items-start gap-4 border-t border-border pt-8"
+                ? showDescription
+                  ? "flex items-start gap-4 border-t border-border pt-8"
+                  : "flex items-start gap-4 border-t border-border pt-8 lg:pt-5"
                 : "flex items-start gap-4"
             }
           >
@@ -41,21 +43,21 @@ export default function Experience({ showDescription = true }: ExperienceProps) 
                 <h3 className="text-lg font-semibold text-ink">
                   {exp.company}
                 </h3>
-
-                <span className="text-sm font-medium text-ink-muted">
-                  {exp.startDate} – {exp.endDate}
-                </span>
               </div>
 
               <p className="mt-1 text-sm text-ink-secondary">{exp.location}</p>
 
               {/* Roles */}
-              <div className="mt-6 space-y-6">
+              <div className={showDescription ? "mt-6 space-y-6" : "mt-6 space-y-6 lg:mt-4 lg:space-y-4"}>
                 {exp.roles.map((role, roleIndex) => (
                   <div
                     key={role.id}
                     className={
-                      roleIndex > 0 ? "border-t border-border pt-6" : ""
+                      roleIndex > 0
+                        ? showDescription
+                          ? "border-t border-border pt-6"
+                          : "border-t border-border pt-6 lg:pt-4"
+                        : ""
                     }
                   >
                     <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
@@ -85,7 +87,7 @@ export default function Experience({ showDescription = true }: ExperienceProps) 
                     )}
 
                     {role.technologies && role.technologies.length > 0 && (
-                      <div className="mt-4 flex flex-wrap gap-2">
+                      <div className={showDescription ? "mt-4 flex flex-wrap gap-2" : "mt-4 flex flex-wrap gap-2 lg:mt-3"}>
                         {role.technologies.map((tech) => (
                           <Badge key={tech}>{tech}</Badge>
                         ))}

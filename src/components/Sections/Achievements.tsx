@@ -46,7 +46,7 @@ export default function Achievements({
                       </h3>
 
                       {showDescription && (
-                        <p className="mt-1 break-words text-sm leading-relaxed text-ink-muted">
+                        <p className="mt-1 break-words lg:text-justify text-sm leading-relaxed text-ink-muted">
                           {achievement.description}
                         </p>
                       )}

@@ -37,7 +37,7 @@ export default function Organization() {
                   {organization.role}
                 </p>
                 {organization.description && (
-                  <p className="mt-2 text-sm leading-relaxed text-ink-secondary">
+                  <p className="mt-2 lg:text-justify text-sm leading-relaxed text-ink-secondary">
                     {organization.description}
                   </p>
                 )}

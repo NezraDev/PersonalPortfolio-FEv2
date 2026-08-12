@@ -23,7 +23,7 @@ export default function Sidebar() {
       initial={initial}
       animate={animate}
       transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-      className="scroll-mt-nav py-10 lg:sticky lg:top-24 lg:h-fit lg:py-16"
+      className="scroll-mt-nav py-10 lg:h-fit lg:py-16"
       id="home"
     >
       <div className="relative h-40 w-40 overflow-hidden rounded-full border border-border bg-surface-subtle shadow-sm">

@@ -97,7 +97,7 @@ export default function Projects({
 
   return (
     <div className="py-8 md:py-10">
-      <div className="flex flex-wrap items-center justify-between gap-4">
+      <div className="flex flex-wrap items-center justify-between gap-4 lg:gap-6">
         <SectionTitle icon={FolderGit2} title="Projects" />
 
         {showFilter && (
@@ -129,7 +129,7 @@ export default function Projects({
           No projects in this category yet.
         </p>
       ) : isPhoneGrid ? (
-        <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:gap-x-8">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:gap-x-8 lg:gap-x-10 lg:gap-y-12">
           {visibleProjects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -144,7 +144,7 @@ export default function Projects({
                 alt={project.title}
                 onPreview={project.coverImage ? () => setPreview({ src: project.coverImage!, alt: project.title }) : undefined}
               />
-              <div className="mx-auto mt-4 max-w-[280px]">
+              <div className="mx-auto mt-4 max-w-[280px] lg:mt-5">
                 <h3 className="text-sm font-semibold text-ink">
                   {project.title}
                 </h3>
@@ -152,16 +152,16 @@ export default function Projects({
                   {project.year}
                 </span>
                 {showDescription && (
-                  <p className="mt-2 text-sm leading-relaxed text-ink-secondary">
+                  <p className="mt-2 lg:text-justify text-sm leading-relaxed text-ink-secondary">
                     {project.description}
                   </p>
                 )}
-                <div className="mt-3 flex flex-wrap gap-2">
+                <div className="mt-3 flex flex-wrap gap-2 lg:mt-4">
                   {project.technologies.map((tech) => (
                     <Badge key={tech}>{tech}</Badge>
                   ))}
                 </div>
-                <div className="mt-3 flex items-center gap-4">
+                <div className="mt-3 flex items-center gap-4 lg:mt-4">
                   {project.githubUrl && (
                     <a
                       href={project.githubUrl}
@@ -192,7 +192,7 @@ export default function Projects({
           ))}
         </div>
       ) : (
-        <div className="space-y-8">
+        <div className="space-y-8 lg:space-y-5">
           {visibleProjects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -203,8 +203,8 @@ export default function Projects({
               className={cn(
                 "rounded-xl transition-all duration-300 ease-premium hover:-translate-y-1 hover:scale-[1.01] hover:shadow-lg",
                 index > 0
-                  ? "flex flex-col gap-4 border-t border-border pt-8 sm:flex-row"
-                  : "flex flex-col gap-4 sm:flex-row",
+                  ? "flex flex-col gap-4 border-t border-border pt-8 sm:flex-row lg:gap-6"
+                  : "flex flex-col gap-4 sm:flex-row lg:gap-6",
               )}
             >
               <ThumbnailBox
@@ -213,7 +213,7 @@ export default function Projects({
                 onPreview={project.coverImage ? () => setPreview({ src: project.coverImage!, alt: project.title }) : undefined}
               />
               <div className="min-w-0 flex-1">
-                <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 lg:gap-x-6 lg:gap-y-2">
                   <h3 className="text-base font-semibold text-ink">
                     {project.title}
                   </h3>
@@ -222,7 +222,7 @@ export default function Projects({
                   </span>
                 </div>
                 {showDescription && (
-                  <p className="mt-2 text-sm leading-relaxed text-ink-secondary">
+                  <p className="mt-2 lg:text-justify text-sm leading-relaxed text-ink-secondary">
                     {project.description}
                   </p>
                 )}

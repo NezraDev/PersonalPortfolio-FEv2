@@ -45,7 +45,13 @@ function App() {
 
       <div className="mx-auto w-full max-w-5xl px-6 pt-8 md:px-10 md:pt-10">
         <div className="lg:grid lg:grid-cols-[240px_1fr] lg:gap-12 lg:items-start lg:min-h-[calc(100vh-4rem)]">
-          <div className={route === "home" ? undefined : "hidden lg:block"}>
+          {route === "home" && (
+            <div className="lg:hidden">
+              <Sidebar />
+            </div>
+          )}
+
+          <div className="hidden lg:block lg:sticky lg:top-[6.5rem] lg:self-start lg:h-fit">
             <Sidebar />
           </div>
 

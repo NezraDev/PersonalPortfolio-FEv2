@@ -62,7 +62,7 @@ export default function Hero() {
             Computer Science Student · Aspiring Software Engineer
           </p>
 
-          <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-ink-muted md:mx-0 md:text-base">
+          <p className="mx-auto mt-4 max-w-xl lg:text-justify text-sm leading-relaxed text-ink-muted md:mx-0 md:text-base">
             Passionate about building innovative solutions, solving real
             problems with code, and creating meaningful user experiences from
             front to back.
