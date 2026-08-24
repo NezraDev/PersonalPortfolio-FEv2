@@ -8,7 +8,7 @@ import dmsaLogo from "../assets/logos/dmsa.png";
 export const experience: Experience[] = [
   {
     id: "moonton-student-leaders",
-    company: "Moonton Games",
+    company: "Moonton Games - Moonton Student Leaders PH",
     logo: moontonLogo,
     location: "Hybrid · Philippines",
     startDate: "May 2025",
@@ -32,7 +32,7 @@ export const experience: Experience[] = [
       },
       {
         id: "student-leader",
-        position: "Moonton Student Leader (Philippines)",
+        position: "Moonton Student Leader",
         startDate: "May 2025",
         endDate: "July 2026",
         description: [
@@ -61,7 +61,7 @@ export const experience: Experience[] = [
     id: "dmsa-digital-media",
     company: "DMSA Pest Control Services",
     logo: dmsaLogo,
-    location: "Los Baños, Laguna, Philippines",
+    location: "Remote · Los Baños, Laguna, Philippines",
     startDate: "August 2026",
     endDate: "Present",
     roles: [
@@ -92,9 +92,9 @@ export const experience: Experience[] = [
   },
   {
     id: "freelance-uiux",
-    company: "Freelance / Independent Contract Work",
+    company: "Freelance",
     logo: freelance,
-    location: "Remote",
+    location: "Remote · Los Baños, Laguna, Philippines",
     startDate: "Jan 2024",
     endDate: "Present",
     roles: [
@@ -142,9 +142,9 @@ export const experience: Experience[] = [
 
   {
     id: "lspu-extension",
-    company: "Volunteer / Laguna State Polytechnic University",
+    company: "Laguna State Polytechnic University",
     logo: lspuLogo,
-    location: "Onsite - Los Baños, Laguna, Philippines",
+    location: "Hybrid · Los Baños, Laguna, Philippines",
     startDate: "Jan 2025",
     endDate: "Present",
     roles: [
@@ -192,7 +192,7 @@ export const experience: Experience[] = [
     company:
       "Bureau of Plant Industry – Los Baños National Crop Research, Development and Production Support Center",
     logo: bpi,
-    location: "Los Baños, Laguna, Philippines",
+    location: "Onsite · Los Baños, Laguna, Philippines",
     startDate: "April 2023",
     endDate: "May 2023",
     roles: [
