@@ -4,7 +4,9 @@ export type SkillCategory =
   | "Backend"
   | "Databases"
   | "Tools"
-  | "Design";
+  | "Design"
+  | "Productivity Tools"
+  | "IT Support & Troubleshooting";
 
 export interface Skill {
   id: string;

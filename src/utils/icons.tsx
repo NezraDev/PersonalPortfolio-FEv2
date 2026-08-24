@@ -9,8 +9,12 @@ import {
   Users,
   Trophy,
   Award,
+  Laptop,
+  MonitorCog,
+  Wrench,
   type LucideIcon,
 } from "lucide-react";
+
 import {
   SiPython,
   SiJavascript,
@@ -33,22 +37,12 @@ import {
   SiDocker,
   SiFigma,
   SiGithub,
+  SiGoogle,
 } from "react-icons/si";
+
 import { FaLinkedin } from "react-icons/fa6";
 import type { IconType } from "react-icons";
 
-/**
- * Unified icon type.
- *
- * `lucide-react` only ships generic/outline UI icons and doesn't (and won't)
- * include trademarked brand logos (GitHub, LinkedIn, Figma, Docker, Postman,
- * etc.). For those we use `react-icons/si` (Simple Icons), which provides
- * official, up-to-date brand marks as tree-shakeable React components.
- *
- * Both `LucideIcon` and `IconType` render as plain SVG components that accept
- * `className`, `size`, and standard SVG attributes (incl. `strokeWidth`), so
- * they can be safely used interchangeably anywhere an `AppIcon` is expected.
- */
 export type AppIcon = LucideIcon | IconType;
 
 export const techIconMap: Record<string, AppIcon> = {
@@ -57,7 +51,7 @@ export const techIconMap: Record<string, AppIcon> = {
   javascript: SiJavascript,
   typescript: SiTypescript,
   cpp: SiCplusplus,
-  sql: Database, // no single official "SQL" brand mark — generic icon
+  sql: Database,
   php: SiPhp,
 
   // Frontend
@@ -71,7 +65,7 @@ export const techIconMap: Record<string, AppIcon> = {
   nodejs: SiNodedotjs,
   express: SiExpress,
   laravel: SiLaravel,
-  api: Globe, // generic REST/API concept — not a brand
+  api: Globe,
 
   // Databases
   mysql: SiMysql,
@@ -80,11 +74,18 @@ export const techIconMap: Record<string, AppIcon> = {
 
   // Tooling
   git: SiGit,
-  vscode: Code2, // no official brand mark bundled — generic code icon
-
+  vscode: Code2,
   postman: SiPostman,
   docker: SiDocker,
   figma: SiFigma,
+
+  // Productivity Tools
+  google: SiGoogle,
+
+  // IT Support and Troubleshooting
+  hardware: Laptop,
+  software: MonitorCog,
+  troubleshooting: Wrench,
 };
 
 export const socialIconMap: Record<string, AppIcon> = {
@@ -103,10 +104,6 @@ export const achievementIconMap: Record<string, LucideIcon> = {
   award: Award,
 };
 
-/**
- * Official (or closest-match) brand colors for each tech-stack icon, used to
- * render the Tech Stack section in full color instead of flat monochrome.
- */
 export const techBrandColors: Record<string, string> = {
   python: "#3776AB",
   javascript: "#F7DF1E",
@@ -132,10 +129,14 @@ export const techBrandColors: Record<string, string> = {
 
   git: "#F05032",
   vscode: "#007ACC",
-
   postman: "#FF6C37",
   docker: "#2496ED",
   figma: "#F24E1E",
+
+  google: "#4285F4",
+  hardware: "var(--color-ink)",
+  software: "var(--color-ink)",
+  troubleshooting: "var(--color-ink)",
 };
 
 export function getTechIcon(key: string): AppIcon {
