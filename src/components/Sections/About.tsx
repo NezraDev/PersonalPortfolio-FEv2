@@ -9,31 +9,23 @@ export default function About() {
       <AnimatedSection>
         <SectionTitle icon={UserRound} title="About Me" />
 
-        <div className="max-w-2xl space-y-4 text-sm leading-relaxed text-ink-secondary md:text-base text-justify">
+        <div className="max-w-2xl space-y-4 text-justify text-sm leading-relaxed text-ink-secondary md:text-base">
           <p>
-            I'm a 4th-year Computer Science student at Laguna State Polytechnic
-            University — Los Baños Campus, with experience in front-end
-            development, UI/UX design, and basic IT support. I build responsive,
-            user-centered web interfaces using React and Tailwind CSS, with a
-            strong focus on translating Figma designs into polished and
-            functional experiences.
+            I'm a fourth-year Computer Science student at Laguna State
+            Polytechnic University – Los Baños Campus, focused on frontend
+            development and UI/UX design. I turn Figma designs into responsive,
+            accessible interfaces using React, TypeScript, and Tailwind CSS,
+            balancing visual clarity with maintainable implementation.
           </p>
 
           <p>
-            Through client, academic, and personal projects, I've worked on
-            digital products ranging from management systems and interactive
-            dashboards to AI-powered and monitoring interfaces. I also have
-            foundational knowledge of computer hardware and software, system
-            setup, maintenance, and troubleshooting common technical issues. I
-            combine design thinking, frontend development, and practical IT
-            skills to create intuitive and maintainable solutions.
-          </p>
-
-          <p>
-            I'm continuing to grow as a Front-End Developer and IT professional,
-            strengthening my technical implementation, design, troubleshooting,
-            and problem-solving skills while creating digital experiences that
-            solve real problems and make complex systems easier to use.
+            Across professional, academic, and freelance projects, I've helped
+            build management systems, administrative dashboards, and
+            service-based websites for real users and organizations. My
+            background in computer hardware, system setup, and troubleshooting
+            also helps me approach problems beyond the interface. I'm continuing
+            to grow as a frontend developer who creates thoughtful digital
+            products that make complex tasks easier to understand and complete.
           </p>
         </div>
       </AnimatedSection>

@@ -201,10 +201,10 @@ export default function Projects({
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.45, delay: Math.min(index * 0.04, 0.16), ease: [0.16, 1, 0.3, 1] }}
               className={cn(
-                "rounded-xl transition-all duration-300 ease-premium hover:-translate-y-1 hover:scale-[1.01] hover:shadow-lg",
+                "rounded-xl px-4 pb-4 transition-all duration-300 ease-premium hover:-translate-y-1 hover:scale-[1.01] hover:shadow-lg sm:px-5 sm:pb-5",
                 index > 0
                   ? "flex flex-col gap-4 border-t border-border pt-8 sm:flex-row lg:gap-6"
-                  : "flex flex-col gap-4 sm:flex-row lg:gap-6",
+                  : "flex flex-col gap-4 pt-4 sm:flex-row sm:pt-5 lg:gap-6",
               )}
             >
               <ThumbnailBox

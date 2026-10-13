@@ -4,7 +4,7 @@ import { useState } from "react";
 type Theme = "light" | "dark";
 
 function currentTheme(): Theme {
-  return document.documentElement.dataset.theme === "light" ? "light" : "dark";
+  return document.documentElement.dataset.theme === "dark" ? "dark" : "light";
 }
 
 export default function ThemeToggle() {

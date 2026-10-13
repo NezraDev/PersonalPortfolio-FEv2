@@ -14,11 +14,11 @@ export default function Experience({
 }: ExperienceProps) {
   return (
     <div
-      className={showDescription ? "py-8 md:py-10" : "py-8 md:py-10 lg:py-8"}
+      className={showDescription ? "py-7 md:py-8" : "py-7 md:py-8 lg:py-7"}
     >
       <SectionTitle icon={Briefcase} title="Experience" />
 
-      <div className={showDescription ? "space-y-8" : "space-y-8 lg:space-y-5"}>
+      <div className={showDescription ? "space-y-6" : "space-y-6 lg:space-y-5"}>
         {experience.map((exp, index) => (
           <motion.div
             key={exp.id}
@@ -33,8 +33,8 @@ export default function Experience({
             className={
               index > 0
                 ? showDescription
-                  ? "flex items-start gap-4 border-t border-border pt-8"
-                  : "flex items-start gap-4 border-t border-border pt-8 lg:pt-5"
+                  ? "flex items-start gap-4 border-t border-border pt-6"
+                  : "flex items-start gap-4 border-t border-border pt-6 lg:pt-5"
                 : "flex items-start gap-4"
             }
           >
@@ -52,8 +52,8 @@ export default function Experience({
               <div
                 className={
                   showDescription
-                    ? "mt-6 space-y-6"
-                    : "mt-6 space-y-6 lg:mt-4 lg:space-y-4"
+                    ? "mt-4 space-y-5"
+                    : "mt-4 space-y-5 lg:space-y-4"
                 }
               >
                 {exp.roles.map((role, roleIndex) => (
@@ -62,8 +62,8 @@ export default function Experience({
                     className={
                       roleIndex > 0
                         ? showDescription
-                          ? "border-t border-border pt-6"
-                          : "border-t border-border pt-6 lg:pt-4"
+                          ? "border-t border-border pt-5"
+                          : "border-t border-border pt-5 lg:pt-4"
                         : ""
                     }
                   >
@@ -78,14 +78,13 @@ export default function Experience({
                     </div>
 
                     {showDescription && (
-                      <ul className="mt-3 space-y-3">
+                      <ul className="mt-3 list-disc space-y-2 pl-5 marker:text-ink-muted">
                         {role.description.map((point, i) => (
-                          <li key={i} className="flex items-start gap-2">
-                            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-ink-muted" />
-
-                            <p className="flex-1 text-justify text-sm leading-7 text-ink-secondary">
-                              {point}
-                            </p>
+                          <li
+                            key={i}
+                            className="pl-1 text-justify text-sm leading-6 text-ink-secondary"
+                          >
+                            {point}
                           </li>
                         ))}
                       </ul>
@@ -94,7 +93,7 @@ export default function Experience({
                     {showDescription &&
                       role.technologies &&
                       role.technologies.length > 0 && (
-                        <div className="mt-4 flex flex-wrap gap-2">
+                        <div className="mt-3 flex flex-wrap gap-2">
                           {role.technologies.map((tech) => (
                             <Badge key={tech}>{tech}</Badge>
                           ))}

@@ -2,12 +2,53 @@ import type { Project } from "../types/project";
 
 export const projects: Project[] = [
   {
+    id: "dmsa",
+    title: "DMSA Pest Control Services",
+    description:
+      "A digital platform for DMSA Pest Control Services featuring service information, treatment procedures, prevention guides, service areas, interactive maps, project galleries, and an online quotation workflow for customer inquiries and service requests.",
+    coverImage: "assets/projects/dmsaa.png",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Resend",
+      "MapLibre GL",
+      "Git",
+    ],
+    githubUrl: "https://github.com/NezraDev?tab=repositories",
+    liveUrl: "https://dmsapestcontrolservices.netlify.app/",
+    year: "2026",
+    category: "Frontend Development",
+    featured: true,
+  },
+  {
+    id: "centrisai",
+    title: "CentrisAI - Central Bangkok Flood Monitoring and Monitoring System",
+    description:
+      "A unified dashboard for forecasting flood conditions, monitoring rainfall, canal levels, and flow, and reviewing district-level risk across Central Bangkok.",
+    coverImage: "assets/projects/centrisai.png",
+    technologies: [
+      "React",
+      "TailwindCSS",
+      "LightGBM",
+      "FastAPI",
+      "MapLibre GL",
+      "Git",
+    ],
+    githubUrl: "https://github.com/NezraDev?tab=repositories",
+    liveUrl: "https://pgel-flood-forecasting-thesis.vercel.app/",
+    year: "2026",
+    category: "Frontend Development",
+    featured: true,
+  },
+  {
     id: "portfolio-latest",
-    title: "Personal Portfolio Website V2.0 - Latest Version",
+    title: "Personal Portfolio Website",
     description:
       "A modern, responsive personal portfolio showcasing my projects, technical skills, experience, and achievements with an interactive and user-friendly interface.",
     coverImage: "assets/projects/portfolio_v2.png",
-    technologies: ["React", "TailwindCSS"],
+    technologies: ["React", "TailwindCSS", "Git"],
     githubUrl: "https://github.com/NezraDev/PersonalPortfolio-FEv2.git",
     liveUrl: "https://nezra.netlify.app",
     year: "2026",
@@ -16,26 +57,12 @@ export const projects: Project[] = [
   },
 
   {
-    id: "centrisai",
-    title:
-      "CentrisAI - Central Bangkok Flood Monitoring and Monitoring System (V2.0 - In-Progress)",
-    description:
-      "A unified dashboard for forecasting flood conditions, monitoring rainfall, canal levels, and flow, and reviewing district-level risk across Central Bangkok.",
-    coverImage: "assets/projects/centrisai.png",
-    technologies: ["React", "TailwindCSS"],
-    githubUrl: "https://github.com/NezraDev?tab=repositories",
-    liveUrl: "https://centrisai.netlify.app",
-    year: "2026",
-    category: "Frontend Development",
-    featured: true,
-  },
-  {
     id: "rooftop",
     title: "AI-Based Rooftop Detection and House Counting (In-Progress)",
     description:
       "An AI-powered computer vision system that automatically detects rooftops from aerial or satellite imagery to estimate the number of houses within a specified area.",
     coverImage: "assets/projects/rooftop.png",
-    technologies: ["React", "TailwindCSS"],
+    technologies: ["React", "TailwindCSS", "Git"],
     githubUrl: "https://github.com/NezraDev/Rooftop-House-Detection.git",
     liveUrl: "https://rooftop-detection-ph.netlify.app",
     year: "2026",
@@ -56,6 +83,7 @@ export const projects: Project[] = [
       "MySQL",
       "ESP32",
       "RFID",
+      "Git",
     ],
     githubUrl: "https://github.com/NezraDev?tab=repositories",
     liveUrl: "",
@@ -65,12 +93,11 @@ export const projects: Project[] = [
   },
   {
     id: "bkk-floodwatch",
-    title:
-      "BKK FloodWatch - Bangkok Flood Monitoring and Monitoring System (V1.0)",
+    title: "BKK FloodWatch - Bangkok Flood Monitoring and Monitoring System",
     description:
       "A unified dashboard for forecasting flood conditions, monitoring rainfall, canal levels, and flow, and reviewing district-level risk across the Bangkok, Thailand",
     coverImage: "assets/projects/bkk.png",
-    technologies: ["Vue", "CSS"],
+    technologies: ["Vue", "CSS", "Git"],
     githubUrl: "https://github.com/NezraDev/bkk-floodwatch",
     liveUrl: "https://bkk-floodwatch.netlify.app",
     year: "2026",
@@ -83,7 +110,14 @@ export const projects: Project[] = [
     description:
       "A web-based digital magazine platform that allows users to browse, read, download, and manage digital publications through responsive and interactive reading interfaces.",
     coverImage: "assets/projects/social.png",
-    technologies: ["React", "TailwindCSS"],
+    technologies: [
+      "React",
+      "TailwindCSS",
+      "Git",
+      "Laravel",
+      "PHP",
+      "TypeScript",
+    ],
     githubUrl: "https://github.com/NezraDev/digital-suss-magazine.git",
     liveUrl: "https://the-social-communal.netlify.app/",
     year: "2026",
@@ -96,7 +130,14 @@ export const projects: Project[] = [
     description:
       "A responsive frontend survey page that enables citizens to conveniently submit Citizen Charter satisfaction feedback online through an intuitive, accessible, and mobile-friendly interface.",
     coverImage: "assets/projects/cc.png",
-    technologies: ["React", "TailwindCSS"],
+    technologies: [
+      "React",
+      "TailwindCSS",
+      "Git",
+      "PHP",
+      "Laravel",
+      "TypeScript",
+    ],
     githubUrl:
       "https://github.com/NezraDev/LSPU-LB-Citizen-Client-Satisfaction-Survey-Frontend.git",
     liveUrl: "https://lspu-lb-cc-survey.netlify.app",
@@ -107,11 +148,11 @@ export const projects: Project[] = [
 
   {
     id: "portfolio-old",
-    title: "Personal Portfolio Website V1.0",
+    title: "Old Personal Portfolio Website",
     description:
       "A minimalist, resume-inspired personal portfolio built with a modern React and TypeScript stack, focused on clean typography, smooth scroll animations, and a fully responsive layout.",
     coverImage: "assets/projects/portfolio_v1.png",
-    technologies: ["React", "Tailwind CSS", "HTML", "JavaScript"],
+    technologies: ["React", "Tailwind CSS", "HTML", "JavaScript", "Git"],
     githubUrl: "https://github.com/NezraDev/PersonalPortfolio-FE.git",
     liveUrl: "https://nezradev.me",
     year: "2025",
@@ -124,7 +165,14 @@ export const projects: Project[] = [
     description:
       "A web-based resident information management dashboard that centralizes resident records, streamlines data retrieval, and provides filtering, search, and record management for municipal staff.",
     coverImage: "assets/projects/gadbm.png",
-    technologies: ["React"],
+    technologies: [
+      "Django",
+      "Python",
+      "SQLite",
+      "React",
+      "TaildwindCSS",
+      "Git",
+    ],
     githubUrl: "https://github.com/NezraDev/gad-solution-react.git",
     liveUrl: "https://gad-batong-malake.netlify.app",
     year: "2025",

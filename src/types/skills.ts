@@ -4,6 +4,7 @@ export type SkillCategory =
   | "Backend"
   | "Databases"
   | "Tools"
+  | "Web Engineering"
   | "Design"
   | "Productivity Tools"
   | "IT Support & Troubleshooting";

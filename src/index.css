@@ -28,7 +28,6 @@
 }
 
 @layer base {
-  :root,
   :root[data-theme="dark"] {
     color-scheme: dark;
     --theme-ink: #f3f7fd;
@@ -43,6 +42,7 @@
     --theme-accent-contrast: #06101f;
   }
 
+  :root,
   :root[data-theme="light"] {
     color-scheme: light;
     --theme-ink: #111827;
@@ -141,14 +141,14 @@
   }
 
   :root[data-theme="light"] .theme-image-light,
-  :root:not([data-theme]) .theme-image-dark,
+  :root:not([data-theme]) .theme-image-light,
   :root[data-theme="dark"] .theme-image-dark {
     opacity: 1;
     transform: scale(1);
   }
 
   :root[data-theme="light"] .theme-image-dark,
-  :root:not([data-theme]) .theme-image-light,
+  :root:not([data-theme]) .theme-image-dark,
   :root[data-theme="dark"] .theme-image-light {
     opacity: 0;
     transform: scale(1.015);

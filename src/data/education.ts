@@ -27,7 +27,7 @@ export const education: Education[] = [
     endMonth: "August",
     startYear: "2026",
     endYear: "2026",
-    honors: ["Currently Enrolled"],
+    honors: [""],
     location: "Calauan, Laguna, Philippines",
     logo: tesdaLogo,
   },

@@ -12,6 +12,14 @@ import {
   Laptop,
   MonitorCog,
   Wrench,
+  Accessibility,
+  CircleCheckBig,
+  Film,
+  HardDriveDownload,
+  Network,
+  SearchCheck,
+  Server,
+  Smartphone,
   type LucideIcon,
 } from "lucide-react";
 
@@ -38,6 +46,11 @@ import {
   SiFigma,
   SiGithub,
   SiGoogle,
+  SiDjango,
+  SiGoogleforms,
+  SiGooglesheets,
+  SiInertia,
+  SiMaplibre,
 } from "react-icons/si";
 
 import { FaLinkedin } from "react-icons/fa6";
@@ -57,6 +70,8 @@ export const techIconMap: Record<string, AppIcon> = {
   // Frontend
   react: SiReact,
   nextjs: SiNextdotjs,
+  inertia: SiInertia,
+  maplibre: SiMaplibre,
   tailwind: SiTailwindcss,
   html5: SiHtml5,
   css3: SiCss,
@@ -65,6 +80,7 @@ export const techIconMap: Record<string, AppIcon> = {
   nodejs: SiNodedotjs,
   express: SiExpress,
   laravel: SiLaravel,
+  django: SiDjango,
   api: Globe,
 
   // Databases
@@ -81,11 +97,23 @@ export const techIconMap: Record<string, AppIcon> = {
 
   // Productivity Tools
   google: SiGoogle,
+  "google-sheets": SiGooglesheets,
+  "google-forms": SiGoogleforms,
 
   // IT Support and Troubleshooting
   hardware: Laptop,
   software: MonitorCog,
   troubleshooting: Wrench,
+  responsive: Smartphone,
+  seo: SearchCheck,
+  accessibility: Accessibility,
+  validation: CircleCheckBig,
+  testing: CircleCheckBig,
+  server: Server,
+  network: Network,
+  backup: HardDriveDownload,
+  canva: Code2,
+  video: Film,
 };
 
 export const socialIconMap: Record<string, AppIcon> = {
@@ -134,6 +162,11 @@ export const techBrandColors: Record<string, string> = {
   figma: "#F24E1E",
 
   google: "#4285F4",
+  "google-sheets": "#34A853",
+  "google-forms": "#7248B9",
+  inertia: "#9553E9",
+  maplibre: "#396CB2",
+  django: "#092E20",
   hardware: "var(--color-ink)",
   software: "var(--color-ink)",
   troubleshooting: "var(--color-ink)",

@@ -4,8 +4,8 @@ import Section from "../Section";
 import Button from "../Button";
 import SocialIcons from "../SocialIcons";
 import { socials } from "../../data/social";
-import profilePhoto from "../../assets/images/profile.png";
-import profileDarkPhoto from "../../assets/images/profile darkmode.png";
+import profilePhoto from "../../assets/images/profile-light-v2.png";
+import profileDarkPhoto from "../../assets/images/profile-dark-v2.png";
 
 export default function Hero() {
   const handleDownloadResume = () => {

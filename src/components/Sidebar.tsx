@@ -1,27 +1,20 @@
-import { useRef } from "react";
-import { Download } from "lucide-react";
+import { Eye } from "lucide-react";
 import { motion } from "framer-motion";
 import Button from "./Button";
 import SocialIcons from "./SocialIcons";
 import { socials } from "../data/social";
-import profilePhoto from "../assets/images/profile.png";
-import profileDarkPhoto from "../assets/images/profile darkmode.png";
+import profilePhoto from "../assets/images/profile-light-v2.png";
+import profileDarkPhoto from "../assets/images/profile-dark-v2.png";
 
 export default function Sidebar() {
-  const hasAnimated = useRef(false);
-
   const primarySocials = socials.filter(
     (s) => s.icon === "github" || s.icon === "linkedin" || s.icon === "mail",
   );
 
-  const initial = hasAnimated.current ? false : { opacity: 0, y: 12 };
-  const animate = { opacity: 1, y: 0 };
-  hasAnimated.current = true;
-
   return (
     <motion.aside
-      initial={initial}
-      animate={animate}
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
       className="scroll-mt-nav py-10 lg:h-fit lg:py-16"
       id="home"
@@ -56,20 +49,20 @@ export default function Sidebar() {
         creating meaningful user interface and experiences.
       </p>
 
+      <Button
+        href="/Resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        variant="outline"
+        className="mt-5"
+      >
+        <Eye className="h-4 w-4" strokeWidth={2} />
+        View Resume
+      </Button>
+
       <div className="mt-6 border-t border-border pt-5">
         <SocialIcons socials={primarySocials} variant="list" />
       </div>
-
-      <Button
-        href="/resume.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        variant="primary"
-        className="mt-6 w-full"
-      >
-        <Download className="h-4 w-4" strokeWidth={2} />
-        Download Resume
-      </Button>
     </motion.aside>
   );
 }

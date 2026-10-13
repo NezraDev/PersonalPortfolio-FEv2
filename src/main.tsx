@@ -5,9 +5,9 @@ import App from "./App.tsx";
 
 try {
   const storedTheme = window.localStorage.getItem("portfolio-theme");
-  document.documentElement.dataset.theme = storedTheme === "light" ? "light" : "dark";
+  document.documentElement.dataset.theme = storedTheme === "dark" ? "dark" : "light";
 } catch {
-  document.documentElement.dataset.theme = "dark";
+  document.documentElement.dataset.theme = "light";
 }
 
 const rootElement = document.getElementById("root");
