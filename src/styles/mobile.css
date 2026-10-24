@@ -1,0 +1,52 @@
+/* Mobile navigation is a native dialog with focus containment and Escape support. */
+.hero-image-shade { background: linear-gradient(90deg, #000 0%, #000 50%, #080b11a6 80%, #080b11cf 100%); }
+.hero-mobile-controls { display: none; }
+.mobile-navigation, .home-header .mobile-navigation {
+  position: fixed; inset: 12px 12px auto; width: min(520px, calc(100% - 24px));
+  max-height: calc(100dvh - 24px); margin: 0 0 0 auto; padding: 20px;
+  overflow-y: auto; overscroll-behavior: contain; border: 1px solid #34445b;
+  border-radius: 16px; background: #101722; color: #edf2f8;
+  box-shadow: 0 24px 80px #0009;
+}
+.mobile-navigation::backdrop { background: #03070dbb; backdrop-filter: blur(8px); }
+.mobile-menu-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-bottom: 18px; color: #9db9df; font-size: 12px; }
+.mobile-menu-heading .icon-button { width: 44px; height: 44px; flex-basis: 44px; }
+.mobile-navigation nav { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.mobile-navigation nav a { min-height: 52px; padding: 12px; border: 1px solid #26364c; border-radius: 8px; font-size: 13px; overflow-wrap: anywhere; }
+.mobile-navigation nav a:hover { background: #19283d; color: #fff; }
+.mobile-navigation nav .is-current { border-color: #719dd8; background: #1a304d; color: #c4ddff; }
+.mobile-navigation .mobile-resume { display: flex; justify-content: space-between; min-height: 48px; margin-top: 20px; border-top: 1px solid #34445b; border-radius: 0; padding: 18px 0 0; color: #b9d3f8; }
+.services-page .editorial-disciplines h2 { font-size: 22px; margin-block: 18px 12px; }
+.services-page > .button-primary { margin-top: 36px; }
+@media (min-width: 1101px) { .desktop-nav, .home-header .desktop-nav { gap: clamp(9px, 1vw, 18px); } .header-inner { gap: 18px; } }
+@media (max-width: 560px) {
+  .header-inner, .home-header .header-inner { gap: 12px; }
+  .header-actions { gap: 10px; }
+  .header-actions .resume-link { display: none; }
+  .menu-trigger { width: 44px; height: 44px; flex-basis: 44px; }
+  .header-cta, .home-header .header-cta { min-height: 44px; font-size: 12px; }
+  .immersive-hero { height: auto; min-height: 100svh; }
+  .hero-content { height: auto; min-height: 100svh; padding-top: calc(var(--site-header-height) + 24px); padding-bottom: 20px; gap: 28px; }
+  .hero-story { margin-block: auto; }
+  .hero-intro { font-size: 14px; }
+  .hero-featured-project > p { font-size: 12px; }
+  .hero-actions .button-primary, .hero-actions .button-secondary { min-height: 46px; font-size: 12px; }
+  .hero-eyebrow { flex-wrap: wrap; }
+  .hero-project-meta { flex-wrap: wrap; gap: 6px 12px; }
+  .hero-pagination { display: none; }
+  .hero-footer { grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: center; }
+  .hero-controls { width: auto; }
+  .hero-mobile-controls { display: flex; align-items: center; gap: 4px; }
+  .hero-mobile-status { display: grid; gap: 6px; width: 48px; margin-inline: 4px; }
+  .hero-slide-count { color: #aeb9ca; text-align: center; font-size: 10px; font-variant-numeric: tabular-nums; letter-spacing: .04em; }
+  .hero-slide-count strong { color: #f1f4fa; font-weight: 600; }
+  .hero-mobile-progress { position: relative; height: 2px; overflow: hidden; background: #aab5c64d; border-radius: 2px; }
+  .hero-mobile-progress i { position: absolute; inset: 0; background: #8abbff; transform-origin: left center; }
+  .hero-story, .hero-footer, .route-main, .route-content, .editorial-project-copy { min-width: 0; }
+  .route-heading-copy h1 { font-size: clamp(32px, 10vw, 48px); overflow-wrap: anywhere; }
+  .editorial-section-heading { flex-wrap: wrap; gap: 16px; }
+  .editorial-disciplines, .services-page .editorial-disciplines { grid-template-columns: 1fr; gap: 28px; }
+  .services-page .editorial-disciplines article { padding-bottom: 24px; border-bottom: 1px solid #34445b; }
+  .project-gallery-title, .experience-role-heading { overflow-wrap: anywhere; }
+  .project-filter { min-height: 44px; }
+}

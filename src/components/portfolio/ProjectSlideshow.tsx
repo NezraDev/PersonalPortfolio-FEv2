@@ -52,7 +52,7 @@ export default function ProjectSlideshow() {
     setIndex(selected);
   };
   const next = (direction: number) => selectProject((index + direction + projects.length) % projects.length);
-  const projectHref = project.liveUrl || '#/projects';
+  const projectHref = project.liveUrl || '/projects';
   const projectAction = project.category === 'UI/UX Design' ? 'View design' : project.liveUrl ? 'Visit project' : 'Explore project';
 
   return <section
@@ -88,10 +88,13 @@ export default function ProjectSlideshow() {
     <div className="hero-image-shade" aria-hidden="true" />
     <div className="hero-content page-width">
       <div className="hero-story">
+        <div className="hero-introduction">
         <p className="hero-eyebrow"><span className="status-dot" aria-hidden="true" />Full Stack Web Developer</p>
         <h1 id="hero-title">Thoughtful design.<br /><em>Powerful execution.</em></h1>
         <p className="hero-intro">I turn ideas into responsive websites, useful interfaces, and digital experiences built with purpose.</p>
-
+        </div>
+        <div className="hero-work-preview">
+        <p className="hero-work-label">Featured work</p>
         <div className="hero-featured-project" aria-live={playing ? 'off' : 'polite'}>
           <div className="hero-project-meta"><span>{project.category === 'UI/UX Design' ? 'UI/UX Design' : 'Web Development'}</span><span>{project.year}{project.id === 'rooftop' ? ' · In progress' : ''}</span></div>
           <h2>{projectTitle(project.title)}</h2>
@@ -101,6 +104,7 @@ export default function ProjectSlideshow() {
         <div className="hero-actions">
           <a className="button-primary" href={projectHref} target={project.liveUrl ? '_blank' : undefined} rel={project.liveUrl ? 'noopener noreferrer' : undefined}>{projectAction} <ArrowUpRight size={17} /></a>
           <a className="button-secondary" href="/Resume.pdf" target="_blank" rel="noopener noreferrer">View resume <ArrowUpRight size={16} /></a>
+        </div>
         </div>
       </div>
 
@@ -113,6 +117,12 @@ export default function ProjectSlideshow() {
         </button>
 
         <div className="hero-controls" aria-label="Project slideshow controls">
+          <div className="hero-mobile-controls">
+            <div className="hero-mobile-status">
+              <span className="hero-slide-count" aria-label={`Project ${index + 1} of ${projects.length}`}><strong>{String(index + 1).padStart(2, '0')}</strong><span aria-hidden="true"> / </span>{String(projects.length).padStart(2, '0')}</span>
+              <span className="hero-mobile-progress" aria-hidden="true"><motion.i style={{ scaleX: reduced ? 1 : progress }} /></span>
+            </div>
+          </div>
           <p id="hero-rotation-note" className="sr-only">{reduced ? 'Select a marker to view a project.' : 'The active marker fills over five seconds until the next project. Rotation pauses while markers are hovered or keyboard controls are focused.'}</p>
           <div className="hero-pagination" role="group" aria-label="Choose a project" aria-describedby="hero-rotation-note" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
             {projects.map((item, itemIndex) => <button

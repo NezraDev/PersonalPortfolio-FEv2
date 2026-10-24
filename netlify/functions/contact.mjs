@@ -22,9 +22,14 @@ export async function handleContact(request, env = process.env) {
   const RESEND_API_KEY = env.RESEND_API_KEY?.trim();
   const RESEND_FROM_EMAIL = env.RESEND_FROM_EMAIL?.trim();
   const CONTACT_TO_EMAIL = env.CONTACT_TO_EMAIL?.trim();
-  if (!RESEND_API_KEY || !RESEND_FROM_EMAIL || !CONTACT_TO_EMAIL) {
-    console.error('Contact email environment variables are missing.');
-    return json(503, { error: 'The contact form is temporarily unavailable. Please use the email link on the contact page.' });
+  const local = env.NODE_ENV === 'development' || env.NETLIFY_DEV === 'true';
+  const missing = Object.entries({ RESEND_API_KEY, RESEND_FROM_EMAIL, CONTACT_TO_EMAIL })
+    .filter(([, value]) => !value).map(([key]) => key);
+  if (missing.length) {
+    console.error('Contact email environment variables are missing:', missing.join(', '));
+    return json(503, { error: local
+      ? `Contact form configuration is missing: ${missing.join(', ')}. Set these in .env and restart the dev server. See RESEND_SETUP.md.`
+      : 'The contact form is temporarily unavailable. Please use the email link on the contact page.' });
   }
   const content = renderInquiryEmail({ name, email, inquiry });
   try {
@@ -34,7 +39,7 @@ export async function handleContact(request, env = process.env) {
       body: JSON.stringify({
         from: RESEND_FROM_EMAIL,
         to: [CONTACT_TO_EMAIL],
-        reply_to: email.trim(),
+        reply_to: `${JSON.stringify(name.trim())} <${email.trim()}>`,
         subject: `Portfolio inquiry from ${name.trim()}`,
         html: content.html,
         text: content.text,
@@ -48,7 +53,6 @@ export async function handleContact(request, env = process.env) {
       if (response.status === 401) console.error('Verify RESEND_API_KEY is an active Resend sending key.');
       if (response.status === 403) console.error('Verify the sender domain in Resend. The onboarding sender can only send to your Resend account email.');
       if (response.status === 422 || response.status === 400) console.error('Verify RESEND_FROM_EMAIL and CONTACT_TO_EMAIL are valid email addresses.');
-      const local = process.env.NODE_ENV === 'development' || process.env.NETLIFY_DEV === 'true';
       const providerMessage = typeof details?.message === 'string' ? details.message.slice(0, 500) : '';
       const message = response.status === 429
         ? 'Too many requests. Please wait a moment before trying again.'

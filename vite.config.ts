@@ -10,6 +10,7 @@ function localContactEndpoint(mode: string): Plugin {
     name: "local-contact-endpoint",
     configureServer(server) {
       const env = loadEnv(mode, process.cwd(), "");
+      env.NODE_ENV = "development";
       // Read fresh file values without mutating process.env. Vite can reuse the
       // same Node process on restart; injected values would otherwise stay stale.
       for (const filename of [".env", ".env.local", `.env.${mode}`, `.env.${mode}.local`]) {

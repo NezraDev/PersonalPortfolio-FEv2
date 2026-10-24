@@ -6,7 +6,11 @@ export function renderInquiryEmail({ name, email, inquiry }) {
   const sender = escapeHtml(name.trim());
   const address = escapeHtml(email.trim());
   const message = escapeHtml(inquiry.trim()).replace(/\r\n|\r|\n/g, '<br />');
-  const reply = escapeHtml(`mailto:${encodeURIComponent(email.trim())}?subject=${encodeURIComponent('Re: Portfolio inquiry')}`);
+  const replyBody = `Hi ${name.trim()},\r\n\r\nThank you for reaching out.\r\n\r\n`;
+  // Keep the mailbox separator literal for mail clients that do not decode
+  // an encoded @ when populating the recipient field.
+  const recipient = encodeURIComponent(email.trim()).replace(/%40/g, '@');
+  const reply = escapeHtml(`mailto:${recipient}?subject=${encodeURIComponent('Re: Portfolio inquiry')}&body=${encodeURIComponent(replyBody)}`);
   const text = `New portfolio inquiry\n\nName: ${name.trim()}\nContact email: ${email.trim()}\n\n${inquiry.trim()}\n\nReply directly to this email to contact the sender.`;
   const html = `<!doctype html>
 <html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="color-scheme" content="dark" /><meta name="supported-color-schemes" content="dark" /><title>New portfolio inquiry</title>

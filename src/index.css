@@ -4,6 +4,8 @@
 @import "./styles/responsive.css";
 @import "./styles/refinement.css";
 @import "./styles/motion.css";
+@import "./styles/mobile.css";
+@import "./styles/hero.css";
 
 @theme {
   --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;

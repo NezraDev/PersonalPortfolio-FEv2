@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import { MotionConfig } from 'framer-motion';
 import { useProjectDepth } from './hooks/useProjectDepth';
 import { usePortfolioMotion } from './hooks/usePortfolioMotion';
-import { useHashRoute } from './hooks/useHashRoute';
+import { useRoute } from './hooks/useRoute';
 import Navigation from './components/portfolio/Navigation';
 import ProjectSlideshow from './components/portfolio/ProjectSlideshow';
 import Home from './components/Sections/Home';
@@ -13,11 +13,13 @@ import Organization from './components/Sections/Organization';
 import Projects from './components/Sections/Projects';
 import CertificationsPage from './components/Sections/CertificationsPage';
 import Achievements from './components/Sections/Achievements';
+import Services from './components/Sections/Services';
 import Contact from './components/Sections/Contact';
 import { ArrowUpRight } from 'lucide-react';
 
-const labels: Record<string, string> = { home: 'Home', skills: 'Skills', education: 'Education', experience: 'Experience', organization: 'Organization', projects: 'Projects', certifications: 'Certifications', achievements: 'Achievements', contact: 'Contact' };
+const labels: Record<string, string> = { home: 'Home', services: 'Services', skills: 'Skills', education: 'Education', experience: 'Experience', organization: 'Organization', projects: 'Projects', certifications: 'Certifications', achievements: 'Achievements', contact: 'Contact' };
 const pageSummaries: Record<string, string> = {
+  services: 'Design, development, and technical foundations for your next project.',
   skills: 'A practical toolkit spanning full stack web development, interface design, and technical support.',
   education: 'Computer science studies and technical training that shape the way I build.',
   experience: 'Professional, freelance, and community work across software and technical support.',
@@ -29,7 +31,7 @@ const pageSummaries: Record<string, string> = {
 };
 
 export default function App() {
-  const { route } = useHashRoute();
+  const { route } = useRoute();
   const requested = route.split('/')[0];
   const page = labels[requested] ? requested : 'home';
   usePortfolioMotion(page);
@@ -44,6 +46,7 @@ export default function App() {
   }, [page]);
   const renderPage = () => {
     switch (page) {
+      case 'services': return <Services />;
       case 'skills': return <Skills />;
       case 'education': return <Education />;
       case 'experience': return <Experience />;
@@ -69,6 +72,6 @@ export default function App() {
       </header>
       <div key={page} className={`route-content route-content--${page}`}>{renderPage()}</div>
     </main></div>}
-    <footer className={`site-footer page-width${page === 'home' ? '' : ' site-footer--route'}`}><a className="wordmark" href="#/home">nezra<span>.</span></a><p>Full stack web development. Thoughtful execution.</p><a className="text-link" href="mailto:arwilmartinparaiso.tech@gmail.com">Let's talk <ArrowUpRight size={16} /></a></footer>
+    <footer className={`site-footer page-width${page === 'home' ? '' : ' site-footer--route'}`}><a className="wordmark" href="/">nezra<span>.</span></a><p>Full stack web development. Thoughtful execution.</p><a className="text-link" href="mailto:arwilmartinparaiso.tech@gmail.com">Let's talk <ArrowUpRight size={16} /></a></footer>
   </MotionConfig>;
 }

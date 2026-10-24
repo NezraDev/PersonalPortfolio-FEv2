@@ -2,6 +2,10 @@
 
 See [Resend setup](RESEND_SETUP.md) for local development and Netlify environment configuration.
 
+## Page URLs
+
+Pages use clean paths such as `/services`, `/projects`, and `/contact`. Old `/#/contact` links automatically switch to `/contact`. Netlify's SPA rewrite in `netlify.toml` serves direct page visits and refreshes through `index.html`; redeploy to apply it. Other hosts need the equivalent SPA fallback.
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

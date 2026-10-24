@@ -35,7 +35,7 @@ export default function Navbar({ route, navigate }: NavbarProps) {
   const renderLink = (link: (typeof navLinks)[number]) => (
     <a
       key={link.id}
-      href={`#/${link.id}`}
+      href={`/${link.id}`}
       onClick={(e) => handleNavClick(e, link.id)}
       className={cn(
         "relative py-1 text-sm font-medium whitespace-nowrap transition-colors",
@@ -99,7 +99,7 @@ export default function Navbar({ route, navigate }: NavbarProps) {
                 {navLinks.map((link) => (
                   <li key={link.id}>
                     <a
-                      href={`#/${link.id}`}
+                      href={`/${link.id}`}
                       onClick={(e) => handleNavClick(e, link.id)}
                       className={cn(
                         "block w-full rounded-lg px-3 py-2.5 text-left text-sm font-medium transition-colors",
