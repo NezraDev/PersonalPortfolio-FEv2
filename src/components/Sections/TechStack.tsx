@@ -7,14 +7,14 @@ export default function TechStack() {
   return (
     <div id="tech-stack" className="scroll-mt-nav">
       <SectionTitle icon={Monitor} title="Tech Stack" />
-      <div className="grid grid-cols-6 gap-4 sm:grid-cols-7">
+      <div className="tech-stack-grid grid grid-cols-6 gap-4 sm:grid-cols-7">
         {techStack.map((tech) => {
           const Icon = getTechIcon(tech.icon);
           const color = techBrandColors[tech.icon] ?? "var(--color-ink)";
           return (
             <div
               key={tech.id}
-              className="flex items-center justify-center"
+              className="tech-stack-item flex items-center justify-center"
               title={tech.name}
             >
               <Icon
@@ -22,7 +22,7 @@ export default function TechStack() {
                 style={{ color }}
                 strokeWidth={1.5}
               />
-              <span className="sr-only">{tech.name}</span>
+              <span className="tech-stack-label sr-only">{tech.name}</span>
             </div>
           );
         })}

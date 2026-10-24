@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-22T14:42:37Z",
+  "title": "Design System: Nezra Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "accent": { "role": "primary", "displayName": "Clear Blue", "canonical": "#6aa5ff", "tonalRamp": ["oklch(20% 0.15 260)", "oklch(30% 0.17 260)", "oklch(40% 0.19 260)", "oklch(50% 0.20 260)", "oklch(60% 0.20 260)", "oklch(70% 0.18 260)", "oklch(80% 0.14 260)", "oklch(95% 0.04 260)"] },
+      "accent-hover": { "role": "primary", "displayName": "Pale Blue", "canonical": "#8abbff", "tonalRamp": ["oklch(20% 0.11 260)", "oklch(30% 0.13 260)", "oklch(40% 0.15 260)", "oklch(50% 0.16 260)", "oklch(60% 0.16 260)", "oklch(70% 0.14 260)", "oklch(80% 0.11 260)", "oklch(95% 0.03 260)"] },
+      "accent-contrast": { "role": "neutral", "displayName": "Blue Ink", "canonical": "#061222", "tonalRamp": ["oklch(8% 0.02 260)", "oklch(16% 0.025 260)", "oklch(25% 0.03 260)", "oklch(36% 0.035 260)", "oklch(48% 0.04 260)", "oklch(62% 0.035 260)", "oklch(78% 0.025 260)", "oklch(95% 0.01 260)"] },
+      "header-action": { "role": "primary", "displayName": "Bright Header Blue", "canonical": "#61b6ff", "tonalRamp": ["oklch(20% 0.12 245)", "oklch(30% 0.15 245)", "oklch(40% 0.18 245)", "oklch(50% 0.20 245)", "oklch(60% 0.20 245)", "oklch(70% 0.17 245)", "oklch(80% 0.13 245)", "oklch(95% 0.04 245)"] },
+      "header-action-hover": { "role": "primary", "displayName": "Header Hover Blue", "canonical": "#8acaff", "tonalRamp": ["oklch(20% 0.10 245)", "oklch(30% 0.12 245)", "oklch(40% 0.14 245)", "oklch(50% 0.16 245)", "oklch(60% 0.17 245)", "oklch(70% 0.15 245)", "oklch(80% 0.11 245)", "oklch(95% 0.03 245)"] },
+      "hero-accent": { "role": "primary", "displayName": "Display Blue", "canonical": "#8dbaff", "tonalRamp": ["oklch(20% 0.10 255)", "oklch(30% 0.12 255)", "oklch(40% 0.14 255)", "oklch(50% 0.16 255)", "oklch(60% 0.16 255)", "oklch(70% 0.14 255)", "oklch(80% 0.10 255)", "oklch(95% 0.03 255)"] },
+      "slide-active": { "role": "primary", "displayName": "Slide Cyan-Blue", "canonical": "#36b7f4", "tonalRamp": ["oklch(20% 0.12 235)", "oklch(30% 0.15 235)", "oklch(40% 0.18 235)", "oklch(50% 0.19 235)", "oklch(60% 0.18 235)", "oklch(70% 0.15 235)", "oklch(80% 0.11 235)", "oklch(95% 0.03 235)"] },
+      "focus": { "role": "primary", "displayName": "Focus Blue", "canonical": "#82b4ff", "tonalRamp": ["oklch(20% 0.11 260)", "oklch(30% 0.13 260)", "oklch(40% 0.15 260)", "oklch(50% 0.17 260)", "oklch(60% 0.17 260)", "oklch(70% 0.15 260)", "oklch(80% 0.11 260)", "oklch(95% 0.03 260)"] },
+      "surface": { "role": "neutral", "displayName": "Near Black", "canonical": "#090c12", "tonalRamp": ["oklch(8% 0.01 260)", "oklch(14% 0.012 260)", "oklch(22% 0.015 260)", "oklch(32% 0.017 260)", "oklch(45% 0.018 260)", "oklch(60% 0.015 260)", "oklch(76% 0.012 260)", "oklch(96% 0.005 260)"] },
+      "surface-subtle": { "role": "neutral", "displayName": "Charcoal", "canonical": "#111722", "tonalRamp": ["oklch(10% 0.012 260)", "oklch(17% 0.015 260)", "oklch(25% 0.018 260)", "oklch(35% 0.02 260)", "oklch(48% 0.02 260)", "oklch(62% 0.018 260)", "oklch(78% 0.012 260)", "oklch(96% 0.005 260)"] },
+      "panel": { "role": "neutral", "displayName": "Panel Black", "canonical": "#10151f", "tonalRamp": ["oklch(9% 0.012 260)", "oklch(16% 0.015 260)", "oklch(24% 0.018 260)", "oklch(34% 0.02 260)", "oklch(47% 0.02 260)", "oklch(61% 0.018 260)", "oklch(77% 0.012 260)", "oklch(96% 0.005 260)"] },
+      "control": { "role": "neutral", "displayName": "Control Charcoal", "canonical": "#151c28", "tonalRamp": ["oklch(12% 0.012 260)", "oklch(19% 0.015 260)", "oklch(27% 0.018 260)", "oklch(37% 0.02 260)", "oklch(50% 0.02 260)", "oklch(64% 0.018 260)", "oklch(80% 0.012 260)", "oklch(96% 0.005 260)"] },
+      "window-bar": { "role": "neutral", "displayName": "Window Charcoal", "canonical": "#18202d", "tonalRamp": ["oklch(13% 0.012 260)", "oklch(20% 0.015 260)", "oklch(28% 0.018 260)", "oklch(38% 0.02 260)", "oklch(51% 0.02 260)", "oklch(65% 0.018 260)", "oklch(81% 0.012 260)", "oklch(96% 0.005 260)"] },
+      "ink": { "role": "neutral", "displayName": "Cool White", "canonical": "#f1f4fa", "tonalRamp": ["oklch(12% 0.008 260)", "oklch(21% 0.009 260)", "oklch(32% 0.01 260)", "oklch(44% 0.011 260)", "oklch(57% 0.012 260)", "oklch(70% 0.012 260)", "oklch(83% 0.01 260)", "oklch(97% 0.005 260)"] },
+      "ink-secondary": { "role": "neutral", "displayName": "Slate Gray", "canonical": "#b1bacb", "tonalRamp": ["oklch(12% 0.008 260)", "oklch(21% 0.009 260)", "oklch(32% 0.01 260)", "oklch(44% 0.011 260)", "oklch(57% 0.012 260)", "oklch(70% 0.012 260)", "oklch(83% 0.01 260)", "oklch(97% 0.005 260)"] },
+      "ink-muted": { "role": "neutral", "displayName": "Muted Slate", "canonical": "#8e9bb1", "tonalRamp": ["oklch(12% 0.008 260)", "oklch(21% 0.009 260)", "oklch(32% 0.01 260)", "oklch(44% 0.011 260)", "oklch(57% 0.012 260)", "oklch(70% 0.012 260)", "oklch(83% 0.01 260)", "oklch(97% 0.005 260)"] },
+      "border": { "role": "neutral", "displayName": "Divider Slate", "canonical": "#263043", "tonalRamp": ["oklch(10% 0.012 260)", "oklch(17% 0.015 260)", "oklch(25% 0.018 260)", "oklch(35% 0.02 260)", "oklch(48% 0.02 260)", "oklch(62% 0.018 260)", "oklch(78% 0.012 260)", "oklch(96% 0.005 260)"] },
+      "border-strong": { "role": "neutral", "displayName": "Strong Slate", "canonical": "#566783", "tonalRamp": ["oklch(16% 0.015 260)", "oklch(24% 0.018 260)", "oklch(33% 0.02 260)", "oklch(43% 0.022 260)", "oklch(56% 0.022 260)", "oklch(69% 0.02 260)", "oklch(83% 0.014 260)", "oklch(96% 0.005 260)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Editorial Display", "purpose": "Oversized Home hero headline only; blue italic emphasis mirrors the supplied reference." },
+      "body": { "displayName": "Manrope Sans", "purpose": "Readable navigation, body copy, metadata, and original portfolio content." }
+    },
+    "shadows": [
+      { "name": "showcase-panel", "value": "0 24px 50px #00000038", "purpose": "Restrained separation for existing project showcase panels." },
+      { "name": "blue-active-cue", "value": "0 0 10px color-mix(in srgb, #36b7f4 40%, transparent)", "purpose": "Softly identifies the active Home slide marker." }
+    ],
+    "motion": [
+      { "name": "hero-slide", "value": "800ms cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Moves the active background project into view." },
+      { "name": "autoplay-interval", "value": "6500ms", "purpose": "Advances the project carousel when it is visible and not being used." },
+      { "name": "control-transition", "value": "150ms ease", "purpose": "Small hover and focus changes on controls." }
+    ],
+    "breakpoints": [
+      { "name": "compact-navigation", "value": "1100px" },
+      { "name": "tablet", "value": "850px" },
+      { "name": "phone", "value": "560px" },
+      { "name": "small-phone", "value": "360px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Project Action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Clear action for the current featured project.",
+      "html": "<a class=\"ds-action-primary\" href=\"#\">Visit project <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a>",
+      "css": ".ds-action-primary { display:inline-flex; align-items:center; justify-content:center; gap:18px; min-height:46px; padding:11px 18px; border:1px solid var(--color-accent); border-radius:5px; background:var(--color-accent); color:var(--color-accent-contrast); font:700 12px Manrope, sans-serif; text-decoration:none; transition:background 150ms,border-color 150ms; } .ds-action-primary svg { width:17px; height:17px; fill:none; stroke:currentColor; stroke-width:1.8; } .ds-action-primary:hover { background:var(--color-accent-hover); border-color:var(--color-accent-hover); } .ds-action-primary:focus-visible { outline:2px solid var(--color-focus); outline-offset:4px; }"
+    },
+    {
+      "name": "Secondary Action",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Supporting résumé and secondary destinations.",
+      "html": "<a class=\"ds-action-secondary\" href=\"#\">View resume <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a>",
+      "css": ".ds-action-secondary { display:inline-flex; align-items:center; justify-content:center; gap:14px; min-height:46px; padding:11px 18px; border:1px solid var(--color-border-strong); border-radius:5px; background:var(--color-control); color:var(--color-ink); font:700 12px Manrope, sans-serif; text-decoration:none; transition:background 150ms,border-color 150ms; } .ds-action-secondary svg { width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:1.8; } .ds-action-secondary:hover { background:#1b283d; border-color:var(--color-accent); } .ds-action-secondary:focus-visible { outline:2px solid var(--color-focus); outline-offset:4px; }"
+    },
+    {
+      "name": "Home Contact Action",
+      "kind": "button",
+      "refersTo": "header-contact",
+      "description": "Square blue Contact action over the full-screen hero.",
+      "html": "<a class=\"ds-home-contact\" href=\"#/contact\">Contact <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a>",
+      "css": ".ds-home-contact { display:inline-flex; align-items:center; justify-content:center; gap:14px; min-height:44px; min-width:132px; padding:9px 17px; border:1px solid #61b6ff; background:#61b6ff; color:#061222; font:700 11px Manrope,sans-serif; text-decoration:none; transition:background 150ms,border-color 150ms; } .ds-home-contact svg { width:15px; height:15px; fill:none; stroke:currentColor; stroke-width:1.8; } .ds-home-contact:hover { background:#8acaff; border-color:#8acaff; } .ds-home-contact:focus-visible { outline:2px solid var(--color-focus); outline-offset:4px; }"
+    },
+    {
+      "name": "Current Route Link",
+      "kind": "nav",
+      "refersTo": "home-navigation",
+      "description": "Small centered route links with a blue active underline.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Primary navigation\"><a href=\"#/home\" aria-current=\"page\">Home</a><a href=\"#/projects\">Projects</a><a href=\"#/contact\">Contact</a></nav>",
+      "css": ".ds-nav { display:flex; align-items:center; gap:22px; } .ds-nav a { position:relative; display:flex; align-items:center; min-height:44px; color:var(--color-ink-secondary); font:600 11px Manrope,sans-serif; text-decoration:none; } .ds-nav a::after { content:\"\"; position:absolute; right:0; bottom:2px; left:0; height:2px; background:var(--color-accent); transform:scaleX(0); transition:transform 180ms; } .ds-nav a:hover,.ds-nav a[aria-current=\"page\"] { color:var(--color-ink); } .ds-nav a[aria-current=\"page\"]::after { transform:scaleX(1); } .ds-nav a:focus-visible { outline:2px solid var(--color-focus); outline-offset:3px; }"
+    },
+    {
+      "name": "Project Slide Selector",
+      "kind": "custom",
+      "refersTo": "slide-marker",
+      "description": "A row of directly selectable markers for all featured projects.",
+      "html": "<div class=\"ds-pagination\" role=\"group\" aria-label=\"Choose a project\"><button type=\"button\" aria-label=\"Show CentrisAI\" aria-pressed=\"true\"><span></span></button><button type=\"button\" aria-label=\"Show portfolio project\" aria-pressed=\"false\"><span></span></button><button type=\"button\" aria-label=\"Show next project\" aria-pressed=\"false\"><span></span></button></div>",
+      "css": ".ds-pagination { display:flex; align-items:center; gap:5px; } .ds-pagination button { display:flex; flex:1 1 12px; align-items:center; justify-content:center; min-width:12px; height:36px; padding:0; border:0; background:transparent; cursor:pointer; } .ds-pagination button span { width:100%; height:2px; background:#aab5c6a6; transition:height 180ms,background 180ms; } .ds-pagination button:hover span { background:#e5eefb; } .ds-pagination button[aria-pressed=\"true\"] span { height:4px; background:var(--color-slide-active); box-shadow:0 0 10px color-mix(in srgb,var(--color-slide-active) 40%,transparent); } .ds-pagination button:focus-visible { outline:2px solid var(--color-focus); outline-offset:2px; }"
+    },
+    {
+      "name": "Slideshow Control",
+      "kind": "button",
+      "refersTo": "hero-control",
+      "description": "Compact previous, next, and play/pause controls.",
+      "html": "<button class=\"ds-slide-control\" type=\"button\" aria-label=\"Next project\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m9 18 6-6-6-6\"/></svg></button>",
+      "css": ".ds-slide-control { display:grid; flex:0 0 34px; width:34px; height:34px; place-items:center; padding:0; border:1px solid #a5b3c878; border-radius:3px; background:#090c126e; color:var(--color-ink); cursor:pointer; transition:background 150ms,border-color 150ms,color 150ms; } .ds-slide-control svg { width:17px; height:17px; fill:none; stroke:currentColor; stroke-width:1.8; } .ds-slide-control:hover { border-color:var(--color-accent-hover); background:#14243a; color:var(--color-accent-hover); } .ds-slide-control:focus-visible { outline:2px solid var(--color-focus); outline-offset:3px; }"
+    },
+    {
+      "name": "Portfolio Panel",
+      "kind": "card",
+      "refersTo": "home-panel",
+      "description": "Dense container for the original Home sections.",
+      "html": "<section class=\"ds-panel\"><h2>Selected work</h2><p>Projects, experience, and credentials stay easy to reach.</p></section>",
+      "css": ".ds-panel { padding:26px; border:1px solid var(--color-border); border-radius:10px; background:var(--color-panel); color:var(--color-ink); } .ds-panel h2 { margin:0 0 12px; color:var(--color-ink); font:600 21px Manrope,sans-serif; letter-spacing:-.025em; } .ds-panel p { margin:0; color:var(--color-ink-secondary); font:400 14px/1.7 Manrope,sans-serif; }"
+    },
+    {
+      "name": "Project Category Select",
+      "kind": "input",
+      "refersTo": "category-select",
+      "description": "Native category filter on the original Projects page.",
+      "html": "<label class=\"ds-filter\">Category <select><option>Frontend Development</option><option>UI/UX Design</option></select></label>",
+      "css": ".ds-filter { display:grid; gap:6px; color:var(--color-ink-secondary); font:600 12px Manrope,sans-serif; } .ds-filter select { min-height:42px; padding:8px 36px 8px 14px; border:1px solid var(--color-border-strong); border-radius:8px; background:#090c12; color:var(--color-ink); font:500 14px Manrope,sans-serif; } .ds-filter select:focus-visible { outline:2px solid var(--color-focus); outline-offset:3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Midnight Project Reel.",
+    "overview": "Home follows the supplied reference composition: the active project image spans the viewport, a layered black and charcoal scrim gives it depth, and the introduction sits over it in a large serif display face. Cool gray text carries project context while blue marks the emphasized headline, primary actions, and active slide. Navigation stays compact at the top; a scroll cue and individually selectable project markers anchor the lower edge.\n\nThe rest of the portfolio keeps the same dark palette and tighter information rhythm. Home continues into the original sections, and the original nine dedicated routes retain their content and purpose. Manrope handles navigation, controls, metadata, and body copy. Georgia appears only in the Home hero display. The previous warm-paper direction is retired; the owner's current reference is the authority for this hero.",
+    "keyCharacteristics": [
+      "Full-viewport, full-bleed project slideshow with a legibility scrim.",
+      "Large white serif headline with an italic blue emphasis.",
+      "Black, charcoal, cool gray, and controlled blue accents.",
+      "Compact supporting copy, project metadata, and clear actions.",
+      "Dense panels and preserved page structure below the hero."
+    ],
+    "rules": [
+      { "name": "The Blue Cue Rule", "body": "Reserve filled blue for primary actions and the active project cue. Keep secondary emphasis as text or an outline.", "section": "colors" },
+      { "name": "The One Display Rule", "body": "Keep Georgia for the Home hero headline. Use Manrope for the remaining interface and all supporting copy.", "section": "typography" },
+      { "name": "The Full-Bleed, Tight-Content Rule", "body": "Let genuine project imagery fill the hero, but keep the details and sections tightly grouped so a tall screen does not become a blank stage.", "section": "layout" },
+      { "name": "The Legibility Scrim Rule", "body": "Every project image in the hero receives the same layered dark overlay; do not rely on a particular screenshot being dark.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep the palette black, charcoal, gray, and blue across all routes.",
+      "Do use the reference's full-screen image, editorial headline, compact navigation, and lower slide indicators on Home.",
+      "Do preserve every project, all 14 direct slide selectors, and the original nine routes and page content.",
+      "Do keep dynamic project labels truthful, especially Figma designs and in-progress work.",
+      "Do respect reduced motion, keyboard focus, and touch input."
+    ],
+    "donts": [
+      "Don't reintroduce the rejected warm-paper palette.",
+      "Don't let the hero scrim disappear on light project screenshots.",
+      "Don't make Home sections or original dedicated pages difficult to reach.",
+      "Don't claim a generic GitHub profile is a project repository or label designs as live sites.",
+      "Don't invent credentials, results, availability, or project content."
+    ]
+  }
+}

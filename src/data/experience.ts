@@ -1,13 +1,13 @@
 import type { Experience } from "../types/experience";
-import moontonLogo from "../assets/logos/moonton.png";
-import lspuLogo from "../assets/logos/lspu.png";
-import bpi from "../assets/logos/bpi.png";
-import freelance from "../assets/logos/freelance.png";
-import dmsaLogo from "../assets/logos/dmsa.png";
-import tesdaLogo from "../assets/logos/tesda.png";
-import luresLogo from "../assets/logos/lures.png";
-import arcLogo from "../assets/logos/arc.png";
-import suurfaceLogo from "../assets/logos/suurface.png";
+import moontonLogo from "../assets/optimized/logos/moonton.webp";
+import lspuLogo from "../assets/optimized/logos/lspu.webp";
+import bpi from "../assets/optimized/logos/bpi.webp";
+import freelance from "../assets/optimized/logos/freelance.webp";
+import dmsaLogo from "../assets/optimized/logos/dmsa.webp";
+import tesdaLogo from "../assets/optimized/logos/tesda.webp";
+import luresLogo from "../assets/optimized/logos/lures.webp";
+import arcLogo from "../assets/optimized/logos/arc.webp";
+import suurfaceLogo from "../assets/optimized/logos/suurface.webp";
 
 export const experience: Experience[] = [
   {

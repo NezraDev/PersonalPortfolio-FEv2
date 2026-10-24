@@ -22,7 +22,7 @@ export default function Hero() {
       <div className="flex flex-col items-center gap-8 md:flex-row md:items-center md:justify-between">
         {/* Profile Image */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.94 }}
+          initial={{ opacity: 1, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
             duration: 0.6,
@@ -45,7 +45,7 @@ export default function Hero() {
 
         {/* Hero Content */}
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 1, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
             duration: 0.6,

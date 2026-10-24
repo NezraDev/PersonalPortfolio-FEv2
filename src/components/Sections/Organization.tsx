@@ -7,14 +7,14 @@ import { organizations } from "../../data/organization";
 
 export default function Organization() {
   return (
-    <div className="py-8 md:py-10">
+    <div className="organization-page py-8 md:py-10">
       <SectionTitle icon={UsersRound} title="Organization" />
 
-      <StaggerContainer className="grid grid-cols-1 gap-5 md:grid-cols-2">
+      <StaggerContainer className="organization-grid grid grid-cols-1 gap-5 md:grid-cols-2">
         {organizations.map((organization) => (
           <StaggerItem key={organization.id}>
-            <Card className="h-full p-5">
-              <div className="flex items-start gap-4">
+            <Card className="organization-card h-full p-5">
+              <div className="organization-card-heading flex items-start gap-4">
                 <LogoBox
                   src={organization.logo}
                   alt={`${organization.name} logo`}
@@ -32,7 +32,7 @@ export default function Organization() {
                 </div>
               </div>
 
-              <div className="mt-5 border-t border-border pt-4">
+              <div className="organization-card-details mt-5 border-t border-border pt-4">
                 <p className="text-sm font-semibold text-ink">
                   {organization.role}
                 </p>

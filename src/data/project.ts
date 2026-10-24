@@ -3,6 +3,8 @@ import type { Project } from "../types/project";
 export const projects: Project[] = [
   {
     id: "dmsa",
+    highlighted: true,
+    projectType: "Client Project",
     title: "DMSA Pest Control Services",
     description:
       "A digital platform for DMSA Pest Control Services featuring service information, treatment procedures, prevention guides, service areas, interactive maps, project galleries, and an online quotation workflow for customer inquiries and service requests.",
@@ -19,11 +21,49 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/NezraDev?tab=repositories",
     liveUrl: "https://dmsapestcontrolservices.netlify.app/",
     year: "2026",
-    category: "Frontend Development",
+    category: "Web Development",
+    featured: true,
+  },
+  {
+    id: "total-mobile-install",
+    title: "Total Mobile Install",
+    description: "A landing page for a New Orleans automotive service business that helps drivers explore auto glass, ADAS calibration, tinting, and detailing services, view before-and-after work, and inquire about mobile or in-shop service.",
+    coverImage: "assets/projects/total-mobile-install.png",
+    technologies: ["React", "JavaScript", "React Router", "Vite", "CSS", "Node.js", "Netlify Functions", "Resend", "MapLibre GL JS", "Playwright", "Prettier"],
+    liveUrl: "https://totalmobileinstall.com/",
+    year: "2026",
+    category: "Web Development",
+    projectType: "Client Project",
+    featured: true,
+    highlighted: true,
+  },
+  {
+    id: "remedy",
+    title: "Remedy - Skincare & Body Contouring",
+    description: "A landing page for a Harlingen skincare and body-contouring business that helps visitors discover treatments, compare services and prices, and explore booking options through Square.",
+    coverImage: "assets/projects/remedy.png",
+    technologies: ["React", "TypeScript", "React Router", "Vite", "Tailwind CSS", "Node.js", "Netlify Functions", "Resend", "Playwright"],
+    liveUrl: "https://remedy-services.netlify.app/",
+    year: "2026",
+    category: "Web Development",
+    projectType: "Client Project",
+    featured: true,
+  },
+  {
+    id: "music-nook",
+    title: "The Music Nook",
+    description: "A landing page for a private music lessons service that introduces piano, voice, and guitar lessons, showcases student experiences, and helps prospective students inquire about lessons in their area.",
+    coverImage: "assets/projects/music-nook.png",
+    technologies: ["React", "React Router", "Vite", "Tailwind CSS", "CSS", "Node.js", "Netlify Functions", "Resend", "MapLibre GL", "Sharp", "Playwright"],
+    liveUrl: "https://the-music-nook.netlify.app/",
+    year: "2026",
+    category: "Web Development",
+    projectType: "Client Project",
     featured: true,
   },
   {
     id: "centrisai",
+    projectType: "Academic Project",
     title: "CentrisAI - Central Bangkok Flood Monitoring and Monitoring System",
     description:
       "A unified dashboard for forecasting flood conditions, monitoring rainfall, canal levels, and flow, and reviewing district-level risk across Central Bangkok.",
@@ -39,11 +79,12 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/NezraDev?tab=repositories",
     liveUrl: "https://pgel-flood-forecasting-thesis.vercel.app/",
     year: "2026",
-    category: "Frontend Development",
+    category: "Web Development",
     featured: true,
   },
   {
     id: "portfolio-latest",
+    projectType: "Personal Project",
     title: "Personal Portfolio Website",
     description:
       "A modern, responsive personal portfolio showcasing my projects, technical skills, experience, and achievements with an interactive and user-friendly interface.",
@@ -52,12 +93,13 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/NezraDev/PersonalPortfolio-FEv2.git",
     liveUrl: "https://nezra.netlify.app",
     year: "2026",
-    category: "Frontend Development",
+    category: "Web Development",
     featured: true,
   },
 
   {
     id: "rooftop",
+    projectType: "Client Project",
     title: "AI-Based Rooftop Detection and House Counting (In-Progress)",
     description:
       "An AI-powered computer vision system that automatically detects rooftops from aerial or satellite imagery to estimate the number of houses within a specified area.",
@@ -66,11 +108,12 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/NezraDev/Rooftop-House-Detection.git",
     liveUrl: "https://rooftop-detection-ph.netlify.app",
     year: "2026",
-    category: "Frontend Development",
+    category: "Web Development",
     featured: true,
   },
   {
     id: "intellilock",
+    projectType: "Academic Project",
     title: "IntelliLock - IoT RFID Smart Door Lock System",
     description:
       "An IoT-based classroom access management system that uses RFID authentication to prevent unauthorized entry, record classroom access logs, and monitor room availability through a centralized Laravel dashboard.",
@@ -88,11 +131,12 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/NezraDev?tab=repositories",
     liveUrl: "",
     year: "2026",
-    category: "Frontend Development",
+    category: "Web Development",
     featured: true,
   },
   {
     id: "bkk-floodwatch",
+    projectType: "Academic Project",
     title: "BKK FloodWatch - Bangkok Flood Monitoring and Monitoring System",
     description:
       "A unified dashboard for forecasting flood conditions, monitoring rainfall, canal levels, and flow, and reviewing district-level risk across the Bangkok, Thailand",
@@ -101,11 +145,12 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/NezraDev/bkk-floodwatch",
     liveUrl: "https://bkk-floodwatch.netlify.app",
     year: "2026",
-    category: "Frontend Development",
+    category: "Web Development",
     featured: true,
   },
   {
     id: "suss-magazine",
+    projectType: "Client Project",
     title: "SUSS: The Social Communal - Digital Magazine Management System",
     description:
       "A web-based digital magazine platform that allows users to browse, read, download, and manage digital publications through responsive and interactive reading interfaces.",
@@ -121,11 +166,12 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/NezraDev/digital-suss-magazine.git",
     liveUrl: "https://the-social-communal.netlify.app/",
     year: "2026",
-    category: "Frontend Development",
+    category: "Web Development",
     featured: true,
   },
   {
     id: "cc",
+    projectType: "Client Project",
     title: "Digital Citizen Charter Satisfaction Survey",
     description:
       "A responsive frontend survey page that enables citizens to conveniently submit Citizen Charter satisfaction feedback online through an intuitive, accessible, and mobile-friendly interface.",
@@ -142,12 +188,13 @@ export const projects: Project[] = [
       "https://github.com/NezraDev/LSPU-LB-Citizen-Client-Satisfaction-Survey-Frontend.git",
     liveUrl: "https://lspu-lb-cc-survey.netlify.app",
     year: "2026",
-    category: "Frontend Development",
+    category: "Web Development",
     featured: true,
   },
 
   {
     id: "portfolio-old",
+    projectType: "Personal Project",
     title: "Old Personal Portfolio Website",
     description:
       "A minimalist, resume-inspired personal portfolio built with a modern React and TypeScript stack, focused on clean typography, smooth scroll animations, and a fully responsive layout.",
@@ -156,11 +203,12 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/NezraDev/PersonalPortfolio-FE.git",
     liveUrl: "https://nezradev.me",
     year: "2025",
-    category: "Frontend Development",
+    category: "Web Development",
     featured: false,
   },
   {
     id: "resident-management",
+    projectType: "Client Project",
     title: "GAD Information Management System",
     description:
       "A web-based resident information management dashboard that centralizes resident records, streamlines data retrieval, and provides filtering, search, and record management for municipal staff.",
@@ -176,7 +224,7 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/NezraDev/gad-solution-react.git",
     liveUrl: "https://gad-batong-malake.netlify.app",
     year: "2025",
-    category: "Frontend Development",
+    category: "Web Development",
     featured: true,
   },
 
@@ -213,7 +261,7 @@ export const projects: Project[] = [
     id: "Kakampster",
     title: "Kakampster - Disaster Preparedness App ",
     description:
-      "A disaster preparedness mobile application built with React Native that provides real-time alerts, emergency contacts, disaster updates, incident reporting, community forums, donation and volunteer opportunities, and an SOS feature.",
+      "A Figma interface design for a disaster preparedness mobile application, covering alerts, emergency contacts, disaster updates, incident reporting, community forums, donation and volunteer opportunities, and an SOS feature.",
     coverImage: "assets/projects/kakampster.png",
     technologies: ["Figma"],
     githubUrl: undefined,

@@ -1,3 +1,7 @@
+## Contact form
+
+See [Resend setup](RESEND_SETUP.md) for local development and Netlify environment configuration.
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

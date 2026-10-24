@@ -1,0 +1,75 @@
+/* One motion language: precise reveals, quiet feedback, native scrolling. */
+.reading-progress { position: absolute; inset: auto 0 0; height: 2px; background: #93bfff; transform-origin: left; pointer-events: none; }
+.editorial-link > svg, .text-link > svg, .contact-studio-cta > svg,
+.contact-studio-address > svg, .contact-studio-method > svg:last-child,
+.contact-studio-profiles a > svg:last-child { transition: transform 220ms cubic-bezier(.16,1,.3,1); }
+.editorial-link:hover > svg, .editorial-link:focus-visible > svg,
+.text-link:hover > svg, .contact-studio-cta:hover > svg,
+.contact-studio-email:hover svg, .contact-studio-method:hover > svg:last-child,
+.contact-studio-profiles a:hover > svg:last-child { transform: translate(3px, -3px); }
+.editorial-project-image { overflow: hidden; }
+.editorial-project-image img { transition: transform 650ms cubic-bezier(.16,1,.3,1); }
+@media (hover: hover) and (pointer: fine) {
+  .editorial-project-image:hover img { transform: scale(1.025); }
+}
+.header-cta, .contact-studio-cta, .project-type-filter, .icon-button { transition: background-color 180ms, border-color 180ms, color 180ms, box-shadow 180ms; }
+.header-cta:active, .contact-studio-cta:active { box-shadow: inset 0 2px 8px #0003; }
+.mobile-navigation { transform-origin: top; animation: navigation-arrive 220ms cubic-bezier(.16,1,.3,1) both; }
+.inquiry-dialog[open] { animation: dialog-arrive 280ms cubic-bezier(.16,1,.3,1) both; }
+.inquiry-dialog[open]::backdrop { animation: backdrop-arrive 220ms ease-out both; }
+.inquiry-success { animation: dialog-arrive 250ms cubic-bezier(.16,1,.3,1) both; }
+.editorial-disclosure[open] > summary > svg { transform: rotate(90deg); }
+.editorial-disclosure > summary > svg { transition: transform 220ms cubic-bezier(.16,1,.3,1); }
+@keyframes navigation-arrive { from { opacity: .6; translate: 0 -6px; } to { opacity: 1; translate: 0 0; } }
+@keyframes dialog-arrive { from { opacity: .5; translate: 0 12px; } to { opacity: 1; translate: 0 0; } }
+@keyframes backdrop-arrive { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { scroll-behavior: auto !important; }
+  .mobile-navigation, .inquiry-dialog[open], .inquiry-dialog[open]::backdrop, .inquiry-success { animation: none; }
+  .editorial-project-image img, .editorial-link > svg, .text-link > svg,
+  .contact-studio-cta > svg, .contact-studio-address > svg,
+  .contact-studio-method > svg:last-child, .contact-studio-profiles a > svg:last-child,
+  .editorial-disclosure > summary > svg { transition: none; transform: none !important; }
+}
+
+.site-header { transition: background-color 220ms, border-color 220ms; }
+.site-header.home-header.is-scrolled { background: #090c12f5; border-bottom: 1px solid #232c3c; }
+.portfolio-editorial > section, .portfolio-editorial > .editorial-foundation { scroll-margin-top: 100px; }
+
+/* Project previews tilt only on hover; scroll reveals remain two-dimensional. */
+.project-depth {
+  transform: perspective(900px) rotateX(var(--pointer-x, 0deg)) rotateY(var(--pointer-y, 0deg));
+  transform-origin: center;
+  backface-visibility: hidden;
+  box-shadow: none;
+  transition: transform 240ms cubic-bezier(.2,.65,.3,1), box-shadow 240ms ease-out;
+}
+@media (hover: hover) and (pointer: fine) {
+  .project-depth:hover { box-shadow: 0 32px 56px -18px #000d, 0 12px 32px -24px #5683bb80; }
+  .route-content--projects .project-gallery-card:hover { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-depth { transform: none !important; transition: none; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .route-content { animation: route-content-arrive 600ms cubic-bezier(.16,1,.3,1) both; }
+  .hero-story { animation: hero-story-arrive 850ms cubic-bezier(.16,1,.3,1) both; }
+}
+@keyframes route-content-arrive { from { opacity: .35; translate: 0 24px; } to { opacity: 1; translate: 0 0; } }
+@keyframes hero-story-arrive { from { opacity: .35; translate: 0 32px; } to { opacity: 1; translate: 0 0; } }
+
+.project-depth::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none; border-radius: inherit;
+  border: 1px solid #b8d4ff26;
+  background: linear-gradient(135deg, #e0edff14, transparent 38%, transparent 65%, #02050b20);
+  opacity: 0; transition: opacity 240ms;
+}
+.project-depth { position: relative; }
+@media (prefers-reduced-motion: reduce) {
+  .project-depth { box-shadow: none; }
+  .project-depth::after { display: none; }
+}
+
+.project-depth:hover::after { opacity: 1; }

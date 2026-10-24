@@ -1,5 +1,7 @@
+export type ProjectType = "Client Project" | "Academic Project" | "Personal Project";
+
 export type ProjectCategory =
-  | "Frontend Development"
+  | "Web Development"
   | "UI/UX Design"
   | "Full-Stack & IoT Development";
 
@@ -13,5 +15,7 @@ export interface Project {
   liveUrl?: string;
   year: string;
   featured?: boolean;
+  highlighted?: boolean;
   category: ProjectCategory;
+  projectType?: ProjectType;
 }

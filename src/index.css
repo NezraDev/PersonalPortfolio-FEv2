@@ -1,156 +1,53 @@
 @import "tailwindcss";
+@import "./styles/fonts.css";
+@import "./styles/portfolio.css";
+@import "./styles/responsive.css";
+@import "./styles/refinement.css";
+@import "./styles/motion.css";
 
 @theme {
-  /* Typography */
-  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
-
-  /* Semantic theme tokens. Runtime values are defined below per theme. */
-  --color-ink: var(--theme-ink);
-  --color-ink-secondary: var(--theme-ink-secondary);
-  --color-ink-muted: var(--theme-ink-muted);
-  --color-surface: var(--theme-surface);
-  --color-surface-subtle: var(--theme-surface-subtle);
-  --color-border: var(--theme-border);
-  --color-border-strong: var(--theme-border-strong);
-  --color-accent: var(--theme-accent);
-  --color-accent-hover: var(--theme-accent-hover);
-  --color-accent-contrast: var(--theme-accent-contrast);
-
-  /* Breakpoints (defaults kept explicit for clarity) */
-  --breakpoint-sm: 40rem;
-  --breakpoint-md: 48rem;
-  --breakpoint-lg: 64rem;
-  --breakpoint-xl: 80rem;
-  --breakpoint-2xl: 96rem;
-
-  /* Animation easing */
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --color-ink: #f1f4fa;
+  --color-ink-secondary: #b1bacb;
+  --color-ink-muted: #8e9bb1;
+  --color-surface: #090c12;
+  --color-surface-subtle: #111722;
+  --color-border: #263043;
+  --color-border-strong: #566783;
+  --color-accent: #6aa5ff;
+  --color-accent-hover: #8abbff;
+  --color-accent-contrast: #061222;
+  --color-header-action: #61b6ff;
+  --color-header-action-hover: #8acaff;
+  --color-slide-active: #36b7f4;
   --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
 }
-
-@layer base {
-  :root[data-theme="dark"] {
-    color-scheme: dark;
-    --theme-ink: #f3f7fd;
-    --theme-ink-secondary: #c6d2e3;
-    --theme-ink-muted: #8797ad;
-    --theme-surface: #07101f;
-    --theme-surface-subtle: #0d1a2d;
-    --theme-border: #1d304b;
-    --theme-border-strong: #35577f;
-    --theme-accent: #6aa7ff;
-    --theme-accent-hover: #8dbbff;
-    --theme-accent-contrast: #06101f;
-  }
-
-  :root,
-  :root[data-theme="light"] {
-    color-scheme: light;
-    --theme-ink: #111827;
-    --theme-ink-secondary: #334155;
-    --theme-ink-muted: #64748b;
-    --theme-surface: #ffffff;
-    --theme-surface-subtle: #f4f7fb;
-    --theme-border: #e2e8f0;
-    --theme-border-strong: #cbd5e1;
-    --theme-accent: #315f91;
-    --theme-accent-hover: #234d79;
-    --theme-accent-contrast: #ffffff;
-  }
-
-  * {
-    border-color: var(--color-border);
-  }
-
-  html {
-    scroll-behavior: smooth;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  body {
-    background-color: var(--color-surface);
-    color: var(--color-ink);
-    font-family: var(--font-sans);
-    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
-    line-height: 1.5;
-  }
-
-  .theme-transition,
-  .theme-transition *,
-  .theme-transition *::before,
-  .theme-transition *::after {
-    transition-property: background-color, border-color, color, fill, stroke, box-shadow !important;
-    transition-duration: 360ms !important;
-    transition-timing-function: var(--ease-premium) !important;
-  }
-
-  ::selection {
-    background-color: var(--color-accent);
-    color: var(--color-accent-contrast);
-  }
-
-  /* Focus visibility for accessibility */
-  :focus-visible {
-    outline: 2px solid var(--color-accent);
-    outline-offset: 2px;
-  }
-
-  /* Scrollbar styling */
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: var(--color-surface);
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: var(--color-border-strong);
-    border-radius: 9999px;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: var(--color-accent);
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    html {
-      scroll-behavior: auto;
-    }
-
-    *,
-    *::before,
-    *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      scroll-behavior: auto !important;
-      transition-duration: 0.01ms !important;
-    }
-  }
+:root {
+  color-scheme: dark;
+  --theme-surface: #090c12;
+  --theme-surface-subtle: #111722;
+  --theme-ink: #f1f4fa;
+  --theme-ink-secondary: #b1bacb;
+  --theme-ink-muted: #8e9bb1;
+  --theme-border: #263043;
+  --theme-border-strong: #566783;
+  --theme-accent: #6aa5ff;
+  --theme-accent-hover: #8abbff;
+  --theme-accent-contrast: #061222;
+  --paper: #151d2a;
 }
-
-@layer utilities {
-  /* Offset scroll targets so the sticky navbar doesn't cover section headings */
-  .scroll-mt-nav {
-    scroll-margin-top: 6rem;
-  }
-
-  .theme-image-light,
-  .theme-image-dark {
-    transition: opacity 420ms var(--ease-premium), transform 520ms var(--ease-premium);
-  }
-
-  :root[data-theme="light"] .theme-image-light,
-  :root:not([data-theme]) .theme-image-light,
-  :root[data-theme="dark"] .theme-image-dark {
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  :root[data-theme="light"] .theme-image-dark,
-  :root:not([data-theme]) .theme-image-dark,
-  :root[data-theme="dark"] .theme-image-light {
-    opacity: 0;
-    transform: scale(1.015);
-  }
-}
+* { box-sizing: border-box; border-color: var(--color-border); }
+html { scroll-behavior: smooth; scroll-padding-top: 100px; -webkit-font-smoothing: antialiased; scrollbar-color: #384760 #090c12; scrollbar-width: thin; }
+body { margin: 0; font-family: var(--font-sans); background: var(--color-surface); color: var(--color-ink); font-size: 15px; line-height: 1.7; }
+h1, h2, h3, h4, p { margin: 0; }
+h1, h2, h3, h4 { font-family: var(--font-sans); line-height: 1.3; }
+a { color: inherit; text-decoration: none; text-underline-offset: 5px; }
+button { font: inherit; color: inherit; cursor: pointer; }
+button:disabled { cursor: default; opacity: 0.5; }
+a, button { -webkit-tap-highlight-color: transparent; }
+img { display: block; max-width: 100%; }
+::selection { background: #6aa5ff; color: #061222; }
+:focus-visible { outline: 2px solid #82b4ff; outline-offset: 4px; }
+main[tabindex="-1"]:focus { outline: none; }
+.scroll-mt-nav { scroll-margin-top: 100px; }
+.text-justify { text-align: left; }

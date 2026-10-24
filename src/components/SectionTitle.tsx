@@ -7,9 +7,9 @@ interface SectionTitleProps {
 
 export default function SectionTitle({ icon: Icon, title }: SectionTitleProps) {
   return (
-    <div className="mb-8 flex items-center gap-2.5 md:mb-10">
+    <div className="section-title">
       <Icon className="h-4 w-4 text-accent" strokeWidth={2} />
-      <h2 className="text-xs font-semibold tracking-[0.15em] text-ink-secondary uppercase">
+      <h2>
         {title}
       </h2>
     </div>

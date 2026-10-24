@@ -1,12 +1,12 @@
 import type { Achievement } from "../types/achievement";
-import lspuLogo from "../assets/logos/lspu.png";
-import ccs from "../assets/logos/ccs.png";
-import bm from "../assets/logos/bm.png";
-import more from "../assets/logos/more.png";
-import ccsCert from "../assets/certs/ccs.png";
-import ccsCertBM from "../assets/certs/bm.png";
-import moreCert from "../assets/certs/more.png";
-import osasCert from "../assets/certs/osas.png";
+import lspuLogo from "../assets/optimized/logos/lspu.webp";
+import ccs from "../assets/optimized/logos/ccs.webp";
+import bm from "../assets/optimized/logos/bm.webp";
+import more from "../assets/optimized/logos/more.webp";
+import ccsCert from "../assets/optimized/certs/ccs.webp";
+import ccsCertBM from "../assets/optimized/certs/bm.webp";
+import moreCert from "../assets/optimized/certs/more.webp";
+import osasCert from "../assets/optimized/certs/osas.webp";
 
 export const achievements: Achievement[] = [
   {

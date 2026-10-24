@@ -24,13 +24,13 @@ export default function Achievements({
       <Section id="achievements" bordered={false}>
         <SectionTitle icon={Trophy} title="Achievements" />
 
-        <StaggerContainer className="flex flex-col gap-4">
+        <StaggerContainer className="achievement-list flex flex-col gap-4">
           {achievements.map((achievement) => {
             return (
               <StaggerItem key={achievement.id}>
-                <Card className="flex min-w-0 flex-col gap-5 p-4 sm:p-5 md:flex-row md:items-center md:justify-between">
+                <Card className="achievement-card flex min-w-0 flex-col gap-5 p-4 sm:p-5 md:flex-row md:items-center md:justify-between">
                   {/* Left Content */}
-                  <div className="flex min-w-0 flex-1 items-start gap-3 sm:gap-4">
+                  <div className="achievement-summary flex min-w-0 flex-1 items-start gap-3 sm:gap-4">
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden p-1.5 sm:h-14 sm:w-14 sm:p-2">
                       <img
                         src={achievement.logo}
@@ -59,7 +59,7 @@ export default function Achievements({
 
                   {/* Right Image */}
                   {achievement.image && (
-                    <div className="w-full min-w-0 overflow-hidden p-1 sm:p-2 md:h-28 md:w-40 md:shrink-0">
+                    <div className="achievement-image w-full min-w-0 overflow-hidden p-1 sm:p-2 md:h-28 md:w-40 md:shrink-0">
                       <button
                         type="button"
                         onClick={() =>

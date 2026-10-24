@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 
 interface AnimatedSectionProps {
   children: ReactNode;
@@ -12,13 +12,14 @@ export default function AnimatedSection({
   delay = 0,
   className,
 }: AnimatedSectionProps) {
+  const reduced = useReducedMotion();
   return (
     <motion.div
       className={className}
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 1, y: reduced ? 0 : 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.6, delay, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: reduced ? 0 : 0.55, delay: reduced ? 0 : Math.min(delay, 0.16), ease: [0.16, 1, 0.3, 1] }}
     >
       {children}
     </motion.div>
@@ -36,6 +37,7 @@ export function StaggerContainer({
   className,
   staggerDelay = 0.08,
 }: StaggerContainerProps) {
+  const reduced = useReducedMotion();
   return (
     <motion.div
       className={className}
@@ -44,7 +46,7 @@ export function StaggerContainer({
       viewport={{ once: true, margin: "-80px" }}
       variants={{
         hidden: {},
-        visible: { transition: { staggerChildren: staggerDelay } },
+        visible: { transition: { staggerChildren: reduced ? 0 : Math.min(staggerDelay, 0.035) } },
       }}
     >
       {children}
@@ -59,15 +61,16 @@ export function StaggerItem({
   children: ReactNode;
   className?: string;
 }) {
+  const reduced = useReducedMotion();
   return (
     <motion.div
       className={className}
       variants={{
-        hidden: { opacity: 0, y: 16 },
+        hidden: { opacity: 1, y: reduced ? 0 : 12 },
         visible: {
           opacity: 1,
           y: 0,
-          transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] },
+          transition: { duration: reduced ? 0 : 0.45, ease: [0.16, 1, 0.3, 1] },
         },
       }}
     >

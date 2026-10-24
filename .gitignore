@@ -2,3 +2,10 @@ node_modules/
 dist/
 .netlify/
 *.tsbuildinfo
+.impeccable/tooling/
+.impeccable/review/
+.impeccable/build/
+
+.env
+.env.*
+!.env.example

@@ -1,0 +1,32 @@
+const escapeHtml = (value) => String(value).replace(/[&<>"']/g, character => ({
+  '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
+})[character]);
+
+export function renderInquiryEmail({ name, email, inquiry }) {
+  const sender = escapeHtml(name.trim());
+  const address = escapeHtml(email.trim());
+  const message = escapeHtml(inquiry.trim()).replace(/\r\n|\r|\n/g, '<br />');
+  const reply = escapeHtml(`mailto:${encodeURIComponent(email.trim())}?subject=${encodeURIComponent('Re: Portfolio inquiry')}`);
+  const text = `New portfolio inquiry\n\nName: ${name.trim()}\nContact email: ${email.trim()}\n\n${inquiry.trim()}\n\nReply directly to this email to contact the sender.`;
+  const html = `<!doctype html>
+<html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="color-scheme" content="dark" /><meta name="supported-color-schemes" content="dark" /><title>New portfolio inquiry</title>
+<style>body,table,td,a{-webkit-text-size-adjust:100%;}table{border-collapse:collapse;}@media only screen and (max-width:600px){.email-pad{padding-left:24px!important;padding-right:24px!important;}.email-title{font-size:32px!important;}.email-outer{padding:16px 8px!important;}}</style></head>
+<body style="margin:0;padding:0;background-color:#090c12;color:#f1f4fa;font-family:Arial,Helvetica,sans-serif;">
+<div style="display:none;font-size:1px;line-height:1px;color:#090c12;max-height:0;max-width:0;opacity:0;overflow:hidden;mso-hide:all;">A new inquiry from ${sender}. Open to read the message and reply.</div>
+<table role="presentation" width="100%" bgcolor="#090c12" style="width:100%;background-color:#090c12;"><tr><td class="email-outer" align="center" style="padding:40px 16px;">
+<!--[if mso]><table role="presentation" width="600"><tr><td><![endif]-->
+<table role="presentation" width="100%" bgcolor="#111722" style="width:100%;max-width:600px;background-color:#111722;border:1px solid #263043;">
+<tr><td height="4" bgcolor="#93bfff" style="height:4px;line-height:4px;font-size:0;background-color:#93bfff;">&nbsp;</td></tr>
+<tr><td class="email-pad" style="padding:30px 40px 26px;"><p style="margin:0;color:#f1f4fa;font-size:28px;line-height:34px;font-weight:800;letter-spacing:-1px;">nezra<span style="color:#93bfff;">.</span></p><p style="margin:6px 0 0;color:#a7b5c9;font-size:11px;line-height:18px;">Full Stack Web Development</p></td></tr>
+<tr><td class="email-pad" style="padding:0 40px 30px;"><p style="margin:0 0 12px;color:#99bded;font-size:10px;line-height:18px;font-weight:700;letter-spacing:2px;">PORTFOLIO INQUIRY</p><h1 class="email-title" style="margin:0;color:#f1f4fa;font-family:Georgia,'Times New Roman',serif;font-size:38px;line-height:1.18;font-weight:400;">A new conversation.<br /><span style="color:#99bded;font-style:italic;">A new possibility.</span></h1><p style="margin:18px 0 0;color:#b1bacb;font-size:14px;line-height:24px;">Someone reached out through your portfolio. Their details and inquiry are below.</p></td></tr>
+<tr><td class="email-pad" style="padding:0 40px;"><table role="presentation" width="100%" style="width:100%;border-top:1px solid #263043;">
+<tr><td style="padding:22px 0 18px;"><p style="margin:0 0 6px;color:#9db9df;font-size:10px;line-height:18px;font-weight:700;letter-spacing:1.4px;">NAME</p><p style="margin:0;color:#edf2f8;font-size:17px;line-height:26px;overflow-wrap:anywhere;word-break:break-word;">${sender}</p></td></tr>
+<tr><td style="padding:0 0 22px;border-bottom:1px solid #263043;"><p style="margin:0 0 6px;color:#9db9df;font-size:10px;line-height:18px;font-weight:700;letter-spacing:1.4px;">CONTACT EMAIL</p><a href="${reply}" style="color:#b9d3f8;font-size:14px;line-height:24px;text-decoration:none;overflow-wrap:anywhere;word-break:break-word;">${address}</a></td></tr>
+<tr><td style="padding:24px 0 28px;"><p style="margin:0 0 12px;color:#9db9df;font-size:10px;line-height:18px;font-weight:700;letter-spacing:1.4px;">INQUIRY</p><div style="color:#e0e7f2;font-size:15px;line-height:27px;overflow-wrap:anywhere;word-break:break-word;">${message}</div></td></tr>
+</table></td></tr>
+<tr><td class="email-pad" style="padding:0 40px 32px;"><table role="presentation"><tr><td align="center" bgcolor="#93bfff" style="background-color:#93bfff;border-radius:3px;mso-padding-alt:14px 24px;"><a href="${reply}" style="display:inline-block;padding:14px 24px;color:#09111d;font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:20px;font-weight:700;text-decoration:none;">Reply to ${sender}</a></td></tr></table><p style="margin:16px 0 0;color:#a7b5c9;font-size:12px;line-height:21px;">You can also reply directly to this email to contact the sender.</p></td></tr>
+<tr><td class="email-pad" bgcolor="#0d121b" style="padding:22px 40px;background-color:#0d121b;border-top:1px solid #263043;"><p style="margin:0;color:#a7b5c9;font-size:11px;line-height:19px;">Arwil Martin Paraiso &middot; Portfolio contact form</p><p style="margin:5px 0 0;color:#8e9bb1;font-size:11px;line-height:19px;">Submitted through your website. Sender details are provided by the visitor.</p></td></tr>
+</table><!--[if mso]></td></tr></table><![endif]-->
+</td></tr></table></body></html>`;
+  return { html, text };
+}

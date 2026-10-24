@@ -1,6 +1,6 @@
 import type { Education } from "../types/education";
-import lspuLogo from "../assets/logos/lspu.png";
-import tesdaLogo from "../assets/logos/tesda.png";
+import lspuLogo from "../assets/optimized/logos/lspu.webp";
+import tesdaLogo from "../assets/optimized/logos/tesda.webp";
 
 export const education: Education[] = [
   {

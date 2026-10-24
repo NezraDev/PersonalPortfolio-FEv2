@@ -10,16 +10,16 @@ export default function Skills() {
     <Section id="skills" bordered={false}>
       <SectionTitle icon={CodeXml} title="Skills" />
 
-      <StaggerContainer className="grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
+      <StaggerContainer className="skills-grid grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
         {skillGroups.map((group) => {
           const isLargeGroup = group.skills.length > 6;
 
           return (
             <StaggerItem
               key={group.category}
-              className={isLargeGroup ? "sm:col-span-2" : undefined}
+              className={`skill-group${isLargeGroup ? " skill-group--wide sm:col-span-2" : ""}`}
             >
-              <div className="mb-4 border-t border-border pt-3">
+              <div className="skill-group-heading mb-4 border-t border-border pt-3">
                 <h3 className="text-sm font-semibold text-ink">
                   {group.category}
                 </h3>
@@ -27,8 +27,8 @@ export default function Skills() {
               <ul
                 className={
                   isLargeGroup
-                    ? "grid gap-x-8 gap-y-3 sm:grid-cols-2"
-                    : "space-y-3"
+                    ? "skill-list skill-list--wide grid gap-x-8 gap-y-3 sm:grid-cols-2"
+                    : "skill-list space-y-3"
                 }
               >
                 {group.skills.map((skill) => {
@@ -38,7 +38,7 @@ export default function Skills() {
                   return (
                     <li
                       key={skill.id}
-                      className="flex items-center gap-2.5 text-sm text-ink-secondary"
+                      className="skill-list-item flex items-center gap-2.5 text-sm text-ink-secondary"
                     >
                       <Icon
                         className="h-4 w-4 shrink-0"

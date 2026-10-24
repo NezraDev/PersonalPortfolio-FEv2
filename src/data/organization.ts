@@ -1,7 +1,7 @@
 import type { Organization } from "../types/organization";
-import luresLogo from "../assets/logos/lures.png";
-import colabLogo from "../assets/logos/colab.png";
-import mslLogo from "../assets/logos/msl.png";
+import luresLogo from "../assets/optimized/logos/lures.webp";
+import colabLogo from "../assets/optimized/logos/colab.webp";
+import mslLogo from "../assets/optimized/logos/msl.webp";
 
 export const organizations: Organization[] = [
   {
