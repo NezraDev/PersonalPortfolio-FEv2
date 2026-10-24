@@ -1,5 +1,7 @@
 .immersive-hero { height: auto; min-height: max(720px, 100svh); background: #000; }
 .home-header { background: #000d; backdrop-filter: blur(16px); }
+.header-actions .resume-link { display: inline-flex; min-height: 44px; padding: 9px 17px; border: 1px solid #b2ccf0; border-radius: 4px; background: #b2ccf0; color: #091321; font-size: 11px; font-weight: 600; }
+.header-actions .resume-link:hover { background: #d1e3fc; border-color: #d1e3fc; }
 .header-cta { background: transparent; color: #c6cfdd; border-color: #ffffff30; border-radius: 4px; font-weight: 500; }
 .header-cta:hover { background: #ffffff08; color: #fff; border-color: #ffffff60; }
 .hero-content { width: min(calc(100% - 96px), 1280px); height: auto; min-height: max(720px, 100svh); padding-top: calc(var(--site-header-height) + 48px); padding-bottom: 26px; gap: 48px; }
