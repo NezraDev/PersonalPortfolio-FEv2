@@ -37,6 +37,15 @@ Open the local URL printed by Vite and use Contact ? Send an email. Vite now ser
 
 ## 4. Configure Netlify
 
+Enter each variable as a separate key/value in the Netlify dashboard. Unlike a `.env` file, dashboard values should not include wrapping quotes or the `KEY=` prefix:
+
+| Key | Dashboard value |
+| --- | --- |
+| `RESEND_FROM_EMAIL` | `Arwil Portfolio <onboarding@resend.dev>` |
+| `CONTACT_TO_EMAIL` | `arwilmartinparaiso.tech@gmail.com` |
+
+The handler also removes accidental wrapping quotes around complete email settings. Quotes around only a display name are preserved.
+
 In your Netlify project?s environment variables, add the same three variables with Functions scope (or all scopes). Configure values for the deployment contexts you use. Redeploy after saving. The existing `netlify.toml` configures the function directory and build.
 
 Once configured, submit an inquiry from Contact ? Send an email. Check the receiving inbox and Resend email logs. API acceptance does not guarantee inbox delivery; check delivery status in Resend if a message is missing.

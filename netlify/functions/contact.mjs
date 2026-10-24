@@ -2,6 +2,17 @@ import { renderInquiryEmail } from '../lib/inquiry-email.mjs';
 
 const json = (status, body) => Response.json(body, { status, headers: { 'Cache-Control': 'no-store' } });
 
+// Dashboard values may retain the wrapping quotes used in .env files.
+// Preserve quotes around just the display name: "Arwil Portfolio" <sender@domain.com>.
+const emailSetting = value => {
+  const trimmed = value?.trim();
+  if (!trimmed) return trimmed;
+  const quote = trimmed[0];
+  return (quote === '"' || quote === "'") && trimmed.endsWith(quote)
+    ? trimmed.slice(1, -1).trim()
+    : trimmed;
+};
+
 export async function handleContact(request, env = process.env) {
   if (request.method !== 'POST') return json(405, { error: 'Method not allowed.' });
   const origin = request.headers.get('origin');
@@ -20,8 +31,8 @@ export async function handleContact(request, env = process.env) {
     return json(400, { error: 'Enter your name, a valid email address, and an inquiry of up to 4,000 characters.' });
   }
   const RESEND_API_KEY = env.RESEND_API_KEY?.trim();
-  const RESEND_FROM_EMAIL = env.RESEND_FROM_EMAIL?.trim();
-  const CONTACT_TO_EMAIL = env.CONTACT_TO_EMAIL?.trim();
+  const RESEND_FROM_EMAIL = emailSetting(env.RESEND_FROM_EMAIL);
+  const CONTACT_TO_EMAIL = emailSetting(env.CONTACT_TO_EMAIL);
   const local = env.NODE_ENV === 'development' || env.NETLIFY_DEV === 'true';
   const missing = Object.entries({ RESEND_API_KEY, RESEND_FROM_EMAIL, CONTACT_TO_EMAIL })
     .filter(([, value]) => !value).map(([key]) => key);
